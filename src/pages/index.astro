@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Carousel from '../components/Carousel.astro';
+import SoftSkillsCards from '../components/SoftSkillsCards.astro';
+---
+
+
+<Layout>
+  <section class="text-center py-16">
+    <h1 class="text-4xl font-bold text-gray-500">Bienvenido a mi Portafolio</h1>
+    <p class="text-lg text-gray-500 mt-4">Soy un desarrollador fullstack especializado en JavaScript y React.</p>
+  </section>
+  <section class="py-16 bg-gray-100">
+    <h2 class="text-3xl font-bold text-center mb-8">Tecnologías y Frameworks</h2>
+    <Carousel />
+  </section>
+  <section class="py-16 bg-gray-100">
+    <h2 class="text-3xl font-bold text-center mb-8">Habilidades blandas</h2>
+    <SoftSkillsCards />
+  </section>
+</Layout>

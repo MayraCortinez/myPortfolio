@@ -1,0 +1,34 @@
+/* Asegúrate de incluir estos estilos al final de tu archivo de estilos global */
+
+.relative {
+    position: relative;
+  }
+  
+  .absolute {
+    position: absolute;
+  }
+  
+  .inset-0 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .transform {
+    transform: skewX(-12deg);
+  }
+  
+  .origin-bottom-left {
+    transform-origin: bottom left;
+  }
+  
+  .bg-cover {
+    background-size: cover;
+  }
+  
+  .bg-center {
+    background-position: center;
+  }
+  
+  
