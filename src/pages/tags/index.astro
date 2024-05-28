@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from "../../layouts/Layout.astro";
+
+const allProjects = await getCollection('projects');
+
+const tags = [...new Set(allProjects.map((project) => project.data.tags).flat())]; /* devuelve una lista de todas las etiquetas. */
+
+const pageTitle = "Índice de tecnologías"; /* Defino un título de página  */
+---
+
+<Layout pageTitle={pageTitle}> <!-- Paso título de página a la plantilla como atributo de componente. -->
+
+    <div class="tags">
+        {tags.map((tag) =>
+            (
+            <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>  /* <!-- cada etiqueta enlaza con su propia página --> */
+            )
+        )} 
+    </div>
+
+</Layout>
+
+    <style>
+        a {
+          color: #00539F;
+        }
+      
+        .tags {
+          display: flex;
+          flex-wrap: wrap;
+        }
+      
+        .tag {
+          margin: 0.25em;
+          border: dotted 1px #a1a1a1;
+          border-radius: .5em;
+          padding: .5em 1em;
+          font-size: 1.15em;
+          background-color: #F8FCFD;
+        }
+      </style>
+

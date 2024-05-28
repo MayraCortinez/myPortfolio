@@ -2,7 +2,7 @@
 slug: "project-2"
 title: "Proyecto 2"
 tags: ["JavaScript", "React"]
-date: "2023-02-02"
+date: 2023-02-02
 ---
 
 # Proyecto 2

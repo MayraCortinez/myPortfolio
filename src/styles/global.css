@@ -31,4 +31,16 @@
     background-position: center;
   }
   
+  .dropdown-list {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+  }
+  
+  .navbar-nav li:hover.dropdown-list {
+    display: block;
+  }
   
