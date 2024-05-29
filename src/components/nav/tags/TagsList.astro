@@ -1,0 +1,13 @@
+---
+import { getCollection } from "astro:content";
+const projects = await getCollection('projects');
+const uniqueTags = [...new Set(projects.flatMap(project => project.data.tags))];
+---
+
+<ul class="flex-column space-x-4">
+  {uniqueTags.map(tag => (
+    <li>
+      <a href={`/tags/${tag}`} class="text-gray-500 hover:text-gray-900">{tag}</a>
+    </li>
+  ))}
+</ul>

@@ -1,10 +1,10 @@
 ---
 slug: "project-1"
-title: "Proyecto 1"
-tags: ["JavaScript"]
-date: 2023-01-01
+title: "My blog Astro"
+tags: ["JavaScript", "React", "HTML", "CSS", "TailwindCSS", "astro-auth", "OAuth", "Astro"]
+date: 2023-02-02
 ---
 
-# Proyecto 1
+# My Blog Astro
 
-Descripción detallada del proyecto 1.
+Descripción detallada del proyecto 2.

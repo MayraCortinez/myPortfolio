@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from "../../layouts/Layout.astro";
+import ProjectList from '../../components/nav/projects/ProjectList.astro';
+
+
+const projects = await getCollection('projects');
+
+const pageTitle = "Índice de proyectos"; /* Defino un título de página  */
+---
+
+<Layout pageTitle={pageTitle}> <!-- Paso título de página a la plantilla como atributo de componente. -->
+
+   <ProjectList />
+
+</Layout>

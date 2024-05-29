@@ -1,8 +1,28 @@
 ---
+import ContactForm from "./ContactForm.astro";
+
 ---
 
-<footer class="bg-gray-800 text-white py-4 mt-8">
-    <div class="container mx-auto text-center">
+<footer id="Footer" class="border-gray-200 text-gray-600 py-4 mt-8">
+
+    <section class="container d-flex flex-nowrap">
+      <div class="">
+        <ContactForm />
+      </div>
+      <div>
+        <h1>Enlaces de contacto e información profesional</h1>
+        <ul>
+          <li>
+            <a href="Linkedin">Linkedin</a>
+            <a href="Whatsapp">Whatsapp</a>
+            <a href="Gmail">Gmail</a>
+            <a href="Github">Github</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="container mx-auto text-center mt-20">
       <p>&copy; 2024 Cortinez Mayra Desarrolladora Web. Todos los derechos reservados.</p>
     </div>
   </footer>

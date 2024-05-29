@@ -44,3 +44,28 @@
     display: block;
   }
   
+
+/* background */
+@supports (-webkit-mask-size: cover) or (mask-size: cover) {
+  .jCOyGJ {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    max-width: 1368px;
+    z-index: -1;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(9, 9, 9, 1) 0%, rgba(241, 102, 15, 1) 50%), rgb(249, 249, 249);
+    -webkit-mask: url('https://opencollective.com/_next/static/images/HeroBackgroundMask-9431d6bcb511376dc10b0e0ea02b7207.svg') 100% -150px / cover no-repeat;
+    mask: url('https://opencollective.com/_next/static/images/HeroBackgroundMask-9431d6bcb511376dc10b0e0ea02b7207.svg') 100% -150px / cover no-repeat;
+    -webkit-mask-position-x: center;
+    -webkit-mask-position-y: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-origin: border-box;
+    mask-clip: border-box;
+    mask-composite: add;
+    mask-mode: alpha;
+  }
+}

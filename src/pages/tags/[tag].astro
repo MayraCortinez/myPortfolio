@@ -1,6 +1,5 @@
 ---
 import { getCollection } from "astro:content";
-import LinksNavbar from "../../components/LinksNavbar.astro";
 import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
@@ -19,9 +18,11 @@ const { projects } = Astro.props;
 
 <Layout pageTitle={tag}>
   <h1>Projectos en los que se ha utilizado {tag}</h1>
-  <ul>
-    {projects.map((project) => (
-      <LinksNavbar url={`/projects/${project.slug}`} title={project.data.title} />
-    ))}
-  </ul>
+<ul class="tag-list">
+  {projects.map((project) => (
+  <li>
+      <a href={`/projects/${project.slug}`}>{project.data.title}</a>
+  </li>
+  ))}
+</ul>
 </Layout>

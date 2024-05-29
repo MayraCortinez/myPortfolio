@@ -15,10 +15,16 @@ import { ViewTransitions } from "astro:transitions";
     <ViewTransitions />
 	</head>
   <body class="bg-custom-gradient min-h-screen flex flex-col">
-    <Header />
+    <div class="relative h-screen">
+      <div class="jCOyGJ"></div>
+      <div class="container mx-auto p-6 text-black relative z-10">
+    <Header/>
     <main class="flex-grow">
       <slot />
     </main>
     <Footer />
+  </div>
+
+    </div>
   </body>
 </html>

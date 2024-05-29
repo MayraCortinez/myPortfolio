@@ -1,10 +1,10 @@
 ---
 slug: "project-2"
-title: "Proyecto 2"
-tags: ["JavaScript", "React"]
+title: "My Project Manager"
+tags: ["JavaScript","TailwindCSS", "React-Bootstrap", "React", "MERN", "MongoDB", "JWT"]
 date: 2023-02-02
 ---
 
-# Proyecto 2
+# My Project Manager
 
 Descripción detallada del proyecto 2.
