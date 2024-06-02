@@ -4,18 +4,26 @@ import ContactForm from "./ContactForm.astro";
 
 ---
 
-<footer id="Footer" class="border-gray-200 text-white h-full gradient-background ">  
+<footer id="Footer" class=" text-white w-full m-auto h-full mt-48">  
 
-  <section class="bg-black lg:grid lg:grid-cols-3 bg-content">
+  <section class="bg-black lg:grid lg:grid-cols-2 bg-content">
 
-  <div class="px-4 py-16 sm:px-6 lg:row-span-3 lg:px-8">
+ 
+    <div class="px-4 py-16 sm:px-6 lg:row-span-6 lg:px-8">
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 ">
+      <ContactForm /> 
+    </div>
+  
+    </div>
+
+    <div class="px-4 py-16 sm:px-6 lg:row-span-3 lg:px-8 grid-col-end">
     <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
       <div>
         <p>
-          <span class="text-xs uppercase tracking-wide text-gray-500"> Call us </span>
+          <span class="text-xs uppercase tracking-wide text-gray-500"> Llamadas al: </span>
 
-          <a href="#" class="block text-2xl font-medium text-gray-900 hover:opacity-75 sm:text-3xl">
-            0123456789
+          <a href="#" class="block text-2xl font-medium text-gray-600 hover:opacity-75 sm:text-3xl">
+            01121617937
           </a>
         </p>
 
@@ -115,29 +123,17 @@ import ContactForm from "./ContactForm.astro";
         </ul>
       </div>
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-1">
-
-          
-
-
-        
       </div>
     </div>
 
     <div class="mt-12 border-t border-gray-100 pt-12">
       <div class="sm:flex sm:items-center sm:justify-between">
-
-
         <p class="mt-8 text-xs text-gray-500 sm:mt-0">
           &copy; 2024 Cortinez Mayra Desarrolladora Web. Todos los derechos reservados.
         </p>
       </div>
     </div>
-  </div>
-  <div class="px-4 py-16 sm:px-6 lg:row-span-6 lg:px-8">
-    <div class="max-w-lg mx-auto sm:max-w-lg lg:max-w-xl ">
-      <ContactForm />
     </div>
-  
-  </div>
   </section>
+
 </footer>

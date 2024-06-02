@@ -31,7 +31,7 @@ const DiplomaModal = () => {
           {diplomas.map((diploma) => (
             <div
               key={diploma.id}
-              className="mt-8 rounded-xl border hover:bg-black/10 cursor-pointer border-gray-800 p-8 shadow-xl transition hover:border-orange-500/10 hover:shadow-orange-500/10"
+              className="mt-8 rounded-xl border cursor-pointer backdrop-blur-2xl border-gray-200/20 p-8 shadow-xl transition hover:border-orange-500/10 hover:shadow-orange-500/10"
               onClick={() => openModal(diploma.data.img.url)} 
             >
               <svg

@@ -12,7 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: radial-gradient(circle at center, #fa770b, #000000, #000000, #000000);
+  background: radial-gradient(circle at center, #000000, #000000, #000000, #fa770b);
   animation: gradient 20s ease infinite;
 	background-size: 700% 700%;
   margin: 0;

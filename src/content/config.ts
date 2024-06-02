@@ -7,10 +7,10 @@ const projectsCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     tags: z.array(z.string()),
-/*     image: z.object({
+    img: z.object({
       url: z.string(),
       alt: z.string()
-    }), */
+    }), 
     date: z.date(),
   })
 });
