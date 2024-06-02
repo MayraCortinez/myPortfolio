@@ -1,10 +1,11 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
+import Layout from "../../layouts/BaseLayout.astro";
+import { getUniqueTags } from '../../utils/getUniqueTags';
 
 export async function getStaticPaths() {
   const allProjects = await getCollection('projects');
-  const uniqueTags = [...new Set(allProjects.map((project) => project.data.tags).flat())];
+  const uniqueTags = await getUniqueTags(allProjects);
 
   return uniqueTags.map((tag) => ({
     params: { tag },
@@ -17,8 +18,8 @@ const { projects } = Astro.props;
 ---
 
 <Layout pageTitle={tag}>
-  <h1>Projectos en los que se ha utilizado {tag}</h1>
-<ul class="tag-list">
+  <h1 class="text-white">Projectos en los que se ha utilizado {tag}</h1>
+<ul class="tag-list text-white">
   {projects.map((project) => (
   <li>
       <a href={`/projects/${project.slug}`}>{project.data.title}</a>

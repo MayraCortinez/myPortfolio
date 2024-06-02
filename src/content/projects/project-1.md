@@ -7,4 +7,5 @@ date: 2023-02-02
 
 # My Blog Astro
 
-Descripción detallada del proyecto 2.
+Descripción detallada del proyecto 1.
+

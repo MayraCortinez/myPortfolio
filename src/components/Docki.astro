@@ -1,0 +1,22 @@
+<style>
+  .fullscreen {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+  }
+  .transition-transform {
+    transition: transform 0.5s ease;
+  }
+</style>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<div id="scene-container" class="w-full h-full">
+  <div id="scene" class="w-full h-full flex items-center justify-center bg-blue-500">
+    <div id="box" class="w-32 h-32 bg-red-500"></div>
+  </div>
+</div>
+
+<button id="toggle-fullscreen" class="absolute bottom-4 right-4 p-2 bg-gray-800 text-black rounded">Toggle Fullscreen</button>
+
+<script src="./../scripts/script.js"></script>
+</body>

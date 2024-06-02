@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 const projects = await getCollection('projects');
 ---
 
-<ul>
+<ul class="text-white">
   {projects.map(project => (
     <li>
       <a href={`/projects/${project.slug}`}>{project.data.title}</a>

@@ -1,10 +1,7 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Parallax from '../components/Parallax.astro';
 ---
-
-<Layout>
-  <section class="text-center py-16">
-    <h1 class="text-4xl font-bold text-gray-500">Sobre mí</h1>
-    <p class="text-lg text-white mt-4 max-w-2xl mx-auto"></p>
-  </section>
-</Layout>
+<BaseLayout>
+ <Parallax />
+</BaseLayout>

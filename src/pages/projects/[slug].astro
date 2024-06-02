@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
+import MarkdownProjectLayout from '../../layouts/MarkdownProjectLayout.astro';
 
 export async function getStaticPaths() {
   const allProjects = await getCollection('projects');
@@ -17,6 +17,6 @@ if (!project) {
   throw new Error(`Project not found for slug: ${Astro.params.slug}`);
 }
 ---
-<Layout>
+<MarkdownProjectLayout frontmatter={project.data}>
   <Content />
-</Layout>
+</MarkdownProjectLayout>

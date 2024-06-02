@@ -15,6 +15,19 @@ const projectsCollection = defineCollection({
   })
 });
 
+const diplomasCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+  title: z.string(),
+  description: z.string(),
+  img: z.object({
+    url: z.string(),
+    alt: z.string()
+  })
+})
+});
+
 export const collections = {
   'projects': projectsCollection,
+  'diplomas': diplomasCollection,
 };

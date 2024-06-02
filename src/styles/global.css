@@ -1,7 +1,37 @@
-/* Asegúrate de incluir estos estilos al final de tu archivo de estilos global */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: radial-gradient(circle at center, #fa770b, #000000, #000000, #000000);
+  animation: gradient 20s ease infinite;
+	background-size: 700% 700%;
+  margin: 0;
+  line-height: 1.6;
+  transition-delay: 5s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 20px 0;
+  font-weight: 700;
+}
+
+p {
+  margin: 0 0 20px 0;
+  font-size: 1.1em;
+}
 
 .relative {
-    position: relative;
+    position: absolute;
   }
   
   .absolute {
@@ -45,27 +75,180 @@
   }
   
 
-/* background */
-@supports (-webkit-mask-size: cover) or (mask-size: cover) {
-  .jCOyGJ {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    height: 100%;
-    width: 100%;
-    max-width: 1368px;
-    z-index: -1;
-    overflow: hidden;
-    background: linear-gradient(90deg, rgba(9, 9, 9, 1) 0%, rgba(241, 102, 15, 1) 50%), rgb(249, 249, 249);
-    -webkit-mask: url('https://opencollective.com/_next/static/images/HeroBackgroundMask-9431d6bcb511376dc10b0e0ea02b7207.svg') 100% -150px / cover no-repeat;
-    mask: url('https://opencollective.com/_next/static/images/HeroBackgroundMask-9431d6bcb511376dc10b0e0ea02b7207.svg') 100% -150px / cover no-repeat;
-    -webkit-mask-position-x: center;
-    -webkit-mask-position-y: center;
-    mask-size: cover;
-    mask-repeat: no-repeat;
-    mask-origin: border-box;
-    mask-clip: border-box;
-    mask-composite: add;
-    mask-mode: alpha;
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+
+
+.ContactRing{
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ContactRing i {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #fff;
+  transition: 0.5s;
+}
+.ContactRing i:nth-child(1) {
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  animation: animate 6s linear infinite;
+}
+.ContactRing i:nth-child(2) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate 4s linear infinite;
+}
+.ContactRing i:nth-child(3) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate2 10s linear infinite;
+}
+.ContactRing:hover i {
+  border: 6px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.ContactName {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.ContactName h2 {
+  font-size: 2em;
+  color: #fff;
+}
+.ContactName .inputBx {
+  position: relative;
+  width: 100%;
+}
+.ContactName .inputBx input {
+  position: relative;
+  width: 100%;
+  padding: 12px 20px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  font-size: 1.2em;
+  color: #fff;
+  box-shadow: none;
+  outline: none;
+}
+.ContactName .inputBx input[type="submit"] {
+  width: 100%;
+  background: #ff2a00;
+  background: linear-gradient(45deg, #fd3f00, #ff9572);
+  border: none;
+  cursor: pointer;
+}
+.ContactName .inputBx input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+.ContactName .links {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.ContactName.links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+/* Parallax scrolling styles */
+/* Sección de parallax */
+.parallax {
+  /* URL de la imagen de fondo */
+  background-image: url('parallax.jpeg');
+  
+  /* Fijar la imagen de fondo */
+  background-attachment: fixed;
+  
+  /* Posición y tamaño del fondo */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Altura de la sección */
+  height: 80vh;
+}
+
+/* Contenido de la página */
+.content {
+  padding: 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
