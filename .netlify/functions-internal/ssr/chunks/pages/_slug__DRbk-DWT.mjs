@@ -190,7 +190,7 @@ createCollectionToGlobResultMap({
 });
 
 let lookupMap = {};
-lookupMap = {"diplomas":{"type":"content","entries":{"diploma-2":"/src/content/diplomas/diploma-2.md","diploma-1":"/src/content/diplomas/diploma-1.md","diploma-3":"/src/content/diplomas/diploma-3.md","diploma-4":"/src/content/diplomas/diploma-4.md","diploma-5":"/src/content/diplomas/diploma-5.md","diploma-6":"/src/content/diplomas/diploma-6.md","diploma-7":"/src/content/diplomas/diploma-7.md","diploma-8":"/src/content/diplomas/diploma-8.md"}},"projects":{"type":"content","entries":{"project-1":"/src/content/projects/project-1.md","project-2":"/src/content/projects/project-2.md","project-3":"/src/content/projects/project-3.md","project-4":"/src/content/projects/project-4.md"}}};
+lookupMap = {"diplomas":{"type":"content","entries":{"diploma-1":"/src/content/diplomas/diploma-1.md","diploma-2":"/src/content/diplomas/diploma-2.md","diploma-3":"/src/content/diplomas/diploma-3.md","diploma-4":"/src/content/diplomas/diploma-4.md","diploma-5":"/src/content/diplomas/diploma-5.md","diploma-6":"/src/content/diplomas/diploma-6.md","diploma-7":"/src/content/diplomas/diploma-7.md","diploma-8":"/src/content/diplomas/diploma-8.md"}},"projects":{"type":"content","entries":{"project-1":"/src/content/projects/project-1.md","project-2":"/src/content/projects/project-2.md","project-3":"/src/content/projects/project-3.md","project-4":"/src/content/projects/project-4.md"}}};
 
 function createGlobLookup(glob) {
 	return async (collection, lookupId) => {

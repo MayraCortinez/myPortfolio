@@ -1,8 +1,8 @@
 /* empty css                       */
 import { d as createComponent, g as renderTemplate, h as renderComponent, m as maybeRenderHead, i as addAttribute } from '../astro_CPQ37Ys2.mjs';
 import 'kleur/colors';
-import { g as getCollection, a as $$ProjectList, $ as $$BaseLayout, A as AnimatedElement } from './_slug__qchNFBO4.mjs';
-import { g as getUniqueTags } from './_tag__Ct6Y4E2B.mjs';
+import { g as getCollection, a as $$ProjectList, $ as $$BaseLayout, A as AnimatedElement } from './_slug__DRbk-DWT.mjs';
+import { g as getUniqueTags } from './_tag__Xljni4Is.mjs';
 /* empty css                          */
 import { jsxs, jsx } from 'react/jsx-runtime';
 import { useState } from 'react';

@@ -1,7 +1,7 @@
 /* empty css                       */
 import { d as createComponent, g as renderTemplate, h as renderComponent, j as createAstro, m as maybeRenderHead, i as addAttribute } from '../astro_CPQ37Ys2.mjs';
 import 'kleur/colors';
-import { g as getCollection, $ as $$BaseLayout } from './_slug__qchNFBO4.mjs';
+import { g as getCollection, $ as $$BaseLayout } from './_slug__DRbk-DWT.mjs';
 
 async function getUniqueTags(projects) {
     return [...new Set(projects.flatMap(project => project.data.tags))];
