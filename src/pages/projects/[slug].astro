@@ -1,8 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
 import MarkdownProjectLayout from '../../layouts/MarkdownProjectLayout.astro';
+export const prerender = true;
 
 export async function getStaticPaths() {
+
   const allProjects = await getCollection('projects');
   return allProjects.map((project) => ({
     params: { slug: project.slug },
@@ -11,11 +13,15 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props;
-const { Content } = await project.render();
 
-if (!project) {
+
+if (project) {
+  const { Content } = await project.render();
+}else{
   throw new Error(`Project not found for slug: ${Astro.params.slug}`);
 }
+
+const { Content } = await project.render();
 ---
 <MarkdownProjectLayout frontmatter={project.data}>
   <Content />

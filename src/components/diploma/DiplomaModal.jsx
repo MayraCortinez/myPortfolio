@@ -45,17 +45,18 @@ const DiplomaModal = () => {
           {diplomas.map((diploma) => (
             <div
               key={diploma.id}
-              className="flex-col mt-8 rounded-xl border cursor-pointer backdrop-blur-2xl border-orange-200/20 p-8 shadow-xl transition hover:border-orange-500/10 hover:shadow-orange-400/10"
+              className="flex-col mt-8 rounded-xl border backdrop-blur-2xl p-8 shadow-2xl transition border-orange-400/10 shadow-orange-200/10"
              
             >
-            <div id='scroll-container'>
+            <div id='scroll-container' >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="size-10 text-orange-500 svg-diploma rounded-xl"
+                className="size-10 text-orange-500 svg-diploma rounded-xl cursor-pointer hover:shadow-custom-orange focus:shadow-custom-orange"
                 id='animated-div'
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
+                onClick={() => openModal(diploma.data.img.url)} 
               >
                 <path d="M12 14l9-5-9-5-9 5 9 5z" />
                 <path
@@ -67,9 +68,9 @@ const DiplomaModal = () => {
                   strokeWidth="2"
                   d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
                 />
-                onClick={() => openModal(diploma.data.img.url)} 
+              
               </svg>
-              </div>
+            </div>
               <div>
                   <h2 className="mt-4 text-xl font-bold text-white">{diploma.data.title}</h2>
                   <p className="mt-1 text-sm text-gray-300">

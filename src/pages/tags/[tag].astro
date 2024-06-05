@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/BaseLayout.astro";
 import { getUniqueTags } from '../../utils/getUniqueTags';
-
+export const prerender = true;
 export async function getStaticPaths() {
   const allProjects = await getCollection('projects');
   const uniqueTags = await getUniqueTags(allProjects);
