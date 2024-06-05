@@ -21,7 +21,7 @@ const Modal = ({ isOpen, onClose, imageUrl }) => {
         onClick={onClose}
       >
         <label
-          className="max-h-[calc(100vh - 5em)] h-fit max-w-lg overflow-y-auto rounded-md bg-white p-6 text-black shadow-2xl"
+          className="max-h-[calc(100vh - 5em)] h-fit max-w-lg overflow-y-auto rounded-md bg-orange-300/10 p-6 text-black shadow-2xl"
           htmlFor=""
           onClick={(e) => e.stopPropagation()}
         >

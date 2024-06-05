@@ -24,30 +24,30 @@ import TagsList from "./tags/TagsList.astro";
         </div>
         <ul class="hidden md:flex md:items-center space-x-8">
           <li hover:bg-gray-300>
-            <a href="/" class="block mt-4 md:mt-0  border-e border-b hover:border-orange-400/10 hover:shadow-lg hover:shadow-orange-600/50 hover:text-gray-300 p-1 rounded-xl">
+            <a href="/" class="block mt-4 md:mt-0 hover:border-orange-400/10 hover:shadow-lg hover:shadow-orange-600/50 hover:text-gray-300 p-1 rounded-xl">
             Inicio
             </a>
           </li>
           <li>
-            <a href="/about" class="block mt-4 md:mt-0  border-e border-b hover:border-orange-400/10 hover:text-gray-300 hover:shadow-lg hover:shadow-orange-600/50 p-1 rounded-xl">
+            <a href="/about" class="block mt-4 md:mt-0 hover:border-orange-400/10 hover:text-gray-300 hover:shadow-lg hover:shadow-orange-600/50 p-1 rounded-xl">
               Sobre mí
             </a>
           </li>
           <li>
-            <a href="/projects/project-1" class="block mt-4 md:mt-0  border-e border-b hover:border-orange-400/10 hover:text-gray-300 hover:shadow-lg hover:shadow-orange-600/50 p-1 rounded-xl">
+            <a href="/projects/project-1" class="block mt-4 md:mt-0 hover:border-orange-400/10 hover:text-gray-300 hover:shadow-lg hover:shadow-orange-600/50 p-1 rounded-xl">
               Proyectos
             </a>
           </li>
           <li class="relative">
-            <button id="projects-button" class="block mt-4 md:mt-0  border-e border-b hover:border-orange-400/10  hover:text-gray-300 hover:shadow-lg hover:shadow-orange-600/50 p-1 rounded-xl">
+            <button id="projects-button" class="block mt-4 md:mt-0 hover:border-orange-400/10  hover:text-gray-300 hover:shadow-lg hover:shadow-orange-600/50 p-1 rounded-xl">
               Etiquetas
             </button>
-            <div id="projects-menu" class="hidden absolute mt-2 w-48  border-e border-b  hover:text-gray-300 hover:border-orange-400/10  hover:shadow-lg hover:shadow-orange-600/50 p-1 rounded-xl">
-              <TagsList />
+            <div id="projects-menu" class="hidden absolute mt-2 w-48  hover:text-gray-300 hover:border-orange-400/10  hover:shadow-lg hover:shadow-orange-600/50 p-1 rounded-xl">
+              <TagsList client:load/>
             </div>
           </li>
           <li>
-            <a href="#Footer" class="block mt-4 md:mt-0  border-e border-b hover:border-orange-400/10 hover:text-gray-300 hover:shadow-lg hover:shadow-orange-600/50 p-1 rounded-xl">
+            <a href="#Footer" class="block mt-4 md:mt-0 hover:border-orange-400/10 hover:text-gray-300 hover:shadow-lg hover:shadow-orange-600/50 p-1 rounded-xl">
               Contacto
             </a>
           </li>

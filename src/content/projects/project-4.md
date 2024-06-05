@@ -1,7 +1,7 @@
 ---
 slug: "project-4"
 title: "ViveBio"
-tags: ["JavaScript", "NodeJs", "HTML", "CSS", "MySQL", "Express", "ApiRest", "Scrum", "Trello", "Workbench"]
+tags: ["JavaScript", "NodeJs", "Express", "HTML", "CSS", "MySQL", "MVC", "Scrum", "Trello", "Workbench"]
 img: {
     url: "/project4.png",
     alt: "Imágen producto ViveBio"

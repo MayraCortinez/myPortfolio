@@ -1,16 +1,33 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
 import DiplomaModal from '../components/diploma/DiplomaModal';
+import AnimatedElement from '../components/AnimatedElement';
+import About from '../components/About.astro';
 
 ---
 
 
-<Layout>
-  <section class="text-center pt-36">
-    <h1 class="text-4xl font-bold text-white">Bienvenida/o a mi Portafolio</h1>
-    <p class="text-lg text-white mt-4 pb-16">Soy una desarrolladora web Full Stack especializada en JavaScript y React.</p>
+<Layout>    
+  <div class="intro" id="intro">
+    <div>
+      <div class="cube-01"></div>
+      <div class="cube-02"></div>
+      <div class="cube-03"></div>
+      <div class="cube-04"></div>
+      <div class="cube-05"></div>
+    </div>
+    <AnimatedElement client:visible>
+      <section class="text-center pt-36 backdrop:blur-md">
+        <h1 class="text-4xl font-bold text-white z-10">Bienvenida/o a mi Portafolio</h1>
+        <p class="text-lg text-white mt-4 pb-16 z-10">Soy una desarrolladora web Full Stack especializada en JavaScript y React.</p>
+      </section>
+      </AnimatedElement>
+  </div>
+  <section class="h-auto">
+    <About />
   </section>
-  <section class=" h-auto ">
-    <DiplomaModal client:visible/>
-  </section>
+    <section class=" h-auto ">
+      <DiplomaModal client:visible/>
+    </section>
+
 </Layout>

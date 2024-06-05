@@ -1,9 +1,9 @@
 ---
-import  Navbar  from './nav/Navbar.astro';
-
+import  Navbar  from './nav/Navbar.jsx';
+import { slide } from 'astro:transitions';
 ---
 
-    <header>
+    <header transition:animate={slide({ duration: '0.4s' })}>
       <div class="container mx-auto flex justify-between p-4">
         <a href="/">
         <div class="flex row-span-4">
@@ -12,7 +12,7 @@ import  Navbar  from './nav/Navbar.astro';
         </div>
        
         </a>
-        <Navbar/>
+        <Navbar client:load/>
       </div>
 
     </header>
