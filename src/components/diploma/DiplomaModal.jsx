@@ -45,8 +45,8 @@ const DiplomaModal = () => {
           {diplomas.map((diploma) => (
             <div
               key={diploma.id}
-              className="flex-col mt-8 rounded-xl border cursor-pointer backdrop-blur-2xl border-gray-200/20 p-8 shadow-xl transition hover:border-orange-500/10 hover:shadow-orange-400/10"
-              onClick={() => openModal(diploma.data.img.url)} 
+              className="flex-col mt-8 rounded-xl border cursor-pointer backdrop-blur-2xl border-orange-200/20 p-8 shadow-xl transition hover:border-orange-500/10 hover:shadow-orange-400/10"
+             
             >
             <div id='scroll-container'>
               <svg
@@ -67,6 +67,7 @@ const DiplomaModal = () => {
                   strokeWidth="2"
                   d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
                 />
+                onClick={() => openModal(diploma.data.img.url)} 
               </svg>
               </div>
               <div>

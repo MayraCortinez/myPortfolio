@@ -224,6 +224,7 @@ p {
 
 /* Parallax scrolling styles */
 /* Sección de parallax */
+
 .parallax {
   /* URL de la imagen de fondo */
   background-image: url('parallax.jpeg');
@@ -235,10 +236,14 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
   /* Altura de la sección */
   height: 80vh;
 }
+
+.parallax2{
+  background-image: url('parallax2.jpg');
+}
+
 
 /* Contenido de la página */
 .content {
