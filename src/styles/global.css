@@ -382,6 +382,8 @@ p {
   }
 }
 
+
+/* Efecto cubos intro index */
 #intro {
   margin: auto;
   position: relative;
@@ -503,6 +505,8 @@ p {
   border-radius: 115px;
   box-shadow: #d97706ce 0px 0px 20px 5px;
 }
+
+/* Efecto borde slide */
 .gradient-border {
   position: relative;
   width: 200px;
@@ -640,9 +644,87 @@ display: flex;
 justify-content: center;
 flex-direction: column;
 flex-wrap: wrap;
-color: Orange;
+color: white;
 z-index: 2;
 background-color: transparent;
 text-align: center;
 text-shadow: 5px 5px 5px black;
+}
+
+#img-intro{
+  background-image: url('/public/me2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 200px 200px 200px 200px;
+-webkit-border-radius: 200px 200px 200px 200px;
+-moz-border-radius: 200px 200px 200px 200px;
+overflow: hidden;
+} 
+
+
+/* Efecto máquina de escribir texto de introducción */
+.text-intro{
+  background-color: #18181853;
+  backdrop-filter: blur(5px);
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.p-intro{
+  font-size: 2rem;
+  color: white;
+  white-space: nowrap;
+  border-right: 3px solid;
+  width: 23ch;
+  animation: blink 0.5s infinite step-end alternate, escritura 1.8s steps(23);
+  overflow: hidden;
+}
+
+@keyframes blink{
+  50%{border-color: transparent};
+}
+
+@keyframes escritura{
+  from{width:0;}
+}
+
+
+/* slider index */
+
+.slider{
+  width: 75vw;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider .slide-track {
+  display: flex;
+  gap: 4px;
+  animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 40s linear infinite;
+  width: calc(200px * 20);
+}
+
+.slider .slide {
+  width: 200px; 
+}
+
+.slider .slide img {
+  width: 100%;
+}
+
+@keyframes scroll{
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-200px * 10));
+    transform: translatex(calc(-200px * 10));
+  }
 }
