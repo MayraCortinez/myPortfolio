@@ -13,15 +13,13 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-image: '/bg2.svg';
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background: radial-gradient(circle at center, #000000, #000000, #000000, #fa770b);
-  animation: gradient 18s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
-	background-size: 700% 700%;
+  background: radial-gradient(circle at center, #000000, #000000, #000000, #000000);
+  background-color: #181818;
   margin: 0;
   line-height: 1.6;
-  transition-delay: 5s;
+  transition-delay: 15s;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -78,19 +76,6 @@ p {
     display: block;
   }
   
-
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
 
 
 
@@ -512,8 +497,152 @@ p {
 .cube-03,
 .cube-04,
 .cube-05 {
+  background: radial-gradient(circle at center, #000000,#000000,#000000, #000000, #fa770b,#000000,#000000, #000000);
   border: 2px solid orange; 
   background: none;
   border-radius: 115px;
   box-shadow: #d97706ce 0px 0px 20px 5px;
+}
+.gradient-border {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  border-radius: 50px; 
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: radial-gradient(circle at center, #000000, #000000,#000000, #fa770b);
+  border-radius: inherit;
+  z-index: -1;
+  animation: gradient 6s ease-in-out infinite;
+  background-size: 200% 200%;
+  padding: 4px; 
+  box-sizing: border-box;
+  transition-delay: 10s;
+}
+
+
+@keyframes gradient {
+  0%, 20% {
+    background-position:0%;
+  }
+  25%, 45% {
+    background-position:-100%;
+  }
+  50%, 70% {
+    background-position:-200%;
+  }
+  75%, 95% {
+    background-position:-300%;
+  }
+  100% {
+    background-position:-400%;
+  }
+}
+
+.diploma::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: inherit;
+  z-index: -1;
+  background: radial-gradient(circle at center, #fa770b, #000000);
+  animation: gradient 3s ease-in-out infinite;
+  background-size: -100% -100%;
+  padding: 4px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.9s ease-out;
+}
+.diploma:hover::before {
+  opacity: 0.2;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: center;
+  }
+  100% {
+    background-position: -500%;
+  }
+}
+
+
+
+
+.container-intro{
+	height: auto;
+	width: auto; 
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.card-intro{
+height: 350px;
+width: 500px;
+background-color: #101010;
+border-radius: 10%;
+box-shadow: 16px 14px 20px #0000008c;
+position: relative;
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: space-around;
+flex-direction: column;
+
+}
+
+.card-intro::before{
+content: "";
+position: absolute;
+height: 400px;
+width: 600px;
+background-image: conic-gradient(Orange 20deg, transparent 120deg);
+animation: rotar 2s linear infinite;
+}
+
+@keyframes rotar{
+from{
+transform: rotate(0deg);
+}
+to{
+transform: rotate(-360deg);
+}
+}
+
+.card-intro::after{
+content:"";
+display: flex;
+justify-content: center;
+flex-direction: column;
+position:absolute;
+height: 340px;
+width: 490px;
+background-color: #101010;
+border-radius: 10%;
+box-shadow: inset 16px 14px 20px #0000008c;
+}
+
+
+.txt-intro{
+display: flex;
+justify-content: center;
+flex-direction: column;
+flex-wrap: wrap;
+color: Orange;
+z-index: 2;
+background-color: transparent;
+text-align: center;
+text-shadow: 5px 5px 5px black;
 }
