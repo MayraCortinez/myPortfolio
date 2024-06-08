@@ -16,3 +16,4 @@ Trabajo final integrador del curso "Especialización en React" del programa Codo
 
 [Repositorio](https://github.com/MayraCortinez/CAC-ZUS)
 [Deploy](https://reactjsgrupo5-43e69.web.app)
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT7bb4hNwSJb_Wku0sJhJAgwpRgal8I_joqeZmf3Ajworg0tha35K0-hAHLtUno_Q/embed?start=true&loop=false&delayms=3000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>

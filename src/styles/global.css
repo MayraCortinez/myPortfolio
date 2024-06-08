@@ -19,92 +19,11 @@ body {
   background-color: #181818;
   margin: 0;
   line-height: 1.6;
-  transition-delay: 15s;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 20px 0;
-  font-weight: 700;
-}
-
-p {
-  margin: 0 0 20px 0;
-  font-size: 1.1em;
-}
-
-.relative {
-    position: absolute;
-  }
-  
-  .absolute {
-    position: absolute;
-  }
-  
-  .inset-0 {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-  
-  .transform {
-    transform: skewX(-12deg);
-  }
-  
-  .origin-bottom-left {
-    transform-origin: bottom left;
-  }
-  
-  .bg-cover {
-    background-size: cover;
-  }
-  
-  .bg-center {
-    background-position: center;
-  }
-  
-  .dropdown-list {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    padding: 10px;
-    z-index: 1;
-  }
-  
-  .navbar-nav li:hover.dropdown-list {
-    display: block;
-  }
-  
-
-
-
-.w-full {
-  width: 100%;
-}
-
-.h-full {
-  height: 100%;
-}
-
-.h-screen {
-  height: 100vh;
-}
-
-.flex {
-  display: flex;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.items-center {
-  align-items: center;
 }
 
 
 
+/* Animación formulario contacto */
 .ContactRing{
   position: relative;
   width: 300px;
@@ -248,110 +167,6 @@ p {
 }
 
 
-
-
-.cube {
-  width: auto;
-  height: 50px;
-  perspective: 1000px;
-  overflow: hidden;
-  background: radial-gradient(circle at center, #000000, #000000, #000000, #fa770b9b);
-  border-radius: 50%;
-}
-
-.ul-cube {
-  width: auto;
-  height: 50px;
-  position: relative;
-  animation: slide 10s cubic-bezier(.55,.09,.68,.53) infinite; 
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-
-.ul-cube li {
-  width: 100%;
-  height: 50px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  color: rgb(208, 204, 204);
-  opacity: 0;
-  transform: translateY(100%);
-  animation: fadeInOut 10s cubic-bezier(.55,.09,.68,.53) infinite;
-}
-
-.ul-cube li:nth-child(1) {
-  top: 0%;
-  animation-delay: 0s;
-}
-
-.ul-cube li:nth-child(2) {
-  top: 100%;
-  animation-delay: 2.5s;
-}
-
-.ul-cube li:nth-child(3) {
-  top: 200%;
-  animation-delay: 5s;
-}
-
-.ul-cube li:nth-child(4) {
-  top: 300%;
-  animation-delay: 7.5s;
-}
-
-@keyframes slide {
-  0%, 20% {
-    transform: translateY(0);
-  }
-  25%, 45% {
-    transform: translateY(-100%);
-  }
-  50%, 70% {
-    transform: translateY(-200%);
-  }
-  75%, 95% {
-    transform: translateY(-300%);
-  }
-  100% {
-    transform: translateY(-400%);
-  }
-}
-
-@keyframes fadeInOut {
-  0%, 25% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  30%, 100% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-}
-
-@keyframes fadeInOut {
-  0%, 10%, 20% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  25%, 95% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-}
-
-
-
 #scroll-container {
   position: fixed;
   top: 0;
@@ -361,6 +176,10 @@ p {
   overflow: auto;
 }
 
+
+
+
+/* animación ícono diplomas */
 #animated-div {
   width: 32px;
   height: 32px;
@@ -389,7 +208,7 @@ p {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 500px;
+  height: 100vh;
   background-color: black;
 }
 
@@ -400,7 +219,7 @@ p {
   height: 688px;
   width: 501px;
   transform: rotate(135deg);
-  animation: 10s linear 0s infinite alternate running cube-01;
+  animation: 20s linear 0s infinite alternate running cube-01;
  
 }
 
@@ -421,8 +240,8 @@ p {
   height: 688px;
   width: 501px;
   border-radius: 61.5px;
-  transform: rotate(-180deg);
-  animation: 15s linear 0s infinite alternate none running cube-03;
+  transform: rotate(-120deg);
+  animation: 25s linear 0s infinite alternate none running cube-03;
 }
 
 .cube-04 {
@@ -433,7 +252,7 @@ p {
   width: 501px;
   border-radius: 82px;
   transform: rotate(-190deg);
-  animation: 10s linear 0s infinite alternate none running cube-04;
+  animation: 20s linear 0s infinite alternate none running cube-04;
 }
 
 .cube-05 {
@@ -445,7 +264,7 @@ p {
   border-radius: 82px;
   transform: rotate(223deg);
   translate:(-15px, 5px);
-  animation: 10s linear 0s infinite alternate running cube-05;
+  animation: 20s linear 0s infinite alternate running cube-05;
 }
 
 @keyframes cube-01 {
@@ -454,15 +273,18 @@ p {
   }
   100% {
     transform: translate(-170px, -170px);
+
   }
 }
 
 @keyframes cube-02 {
   0% {
     transform: rotate(180deg) ;
+    scale: 1;
   }
   100% {
     transform: rotate(360deg) ;
+    scale: 1.5;
   }
 }
 
@@ -480,7 +302,7 @@ p {
     transform: translate(0, 0);
   }
   100% {
-    transform: translate(-250px, 250px);
+    transform: translate(-150px, 150px);
   }
 }
 
@@ -489,7 +311,7 @@ p {
     transform: translate(0, 0);
   }
   100% {
-    transform: translate(225px, 150px);
+    transform: translate(250px, -250px);
   }
 }
 
@@ -505,6 +327,8 @@ p {
   border-radius: 115px;
   box-shadow: #d97706ce 0px 0px 20px 5px;
 }
+
+
 
 /* Efecto borde slide */
 .gradient-border {
@@ -522,14 +346,14 @@ p {
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: radial-gradient(circle at center, #000000, #000000,#000000, #fa770b);
+  background: radial-gradient(circle at center, #000000, #fa770b);
   border-radius: inherit;
   z-index: -1;
-  animation: gradient 6s ease-in-out infinite;
+  animation: gradient 10s ease-in-out infinite;
   background-size: 200% 200%;
-  padding: 4px; 
+  padding: 8px; 
   box-sizing: border-box;
-  transition-delay: 10s;
+  transition-duration: 10s;
 }
 
 
@@ -551,6 +375,8 @@ p {
   }
 }
 
+
+/* hover diploma */
 .diploma::before {
   content: '';
   position: absolute;
@@ -582,7 +408,7 @@ p {
 }
 
 
-
+/* tarjeta animada */
 
 .container-intro{
 	height: auto;
@@ -728,3 +554,5 @@ overflow: hidden;
     transform: translatex(calc(-200px * 10));
   }
 }
+
+

@@ -1,10 +1,9 @@
 ---
-import  Navbar  from './nav/Navbar.jsx';
 import { slide } from 'astro:transitions';
 ---
 
-    <header transition:animate={slide({ duration: '0.4s' })}>
-      <div class="container mx-auto flex justify-between p-4">
+    <header class="m-auto bg-gray-400/10 filter backdrop-blur-2xl text-white text-center sticky h-1/4 top-0 z-50 sticky-header" transition:animate={slide({ duration: '0.6s' })}>
+      <section class="container mx-auto flex center">
         <a href="/">
         <div class="flex row-span-4">
           <img src="code.png" alt="Logo" class="h-8 w-auto" />
@@ -12,7 +11,30 @@ import { slide } from 'astro:transitions';
         </div>
        
         </a>
-        <Navbar client:load/>
-      </div>
+        <a href="/projects">
+          <div class="flex ">
+          <button class="flex-column text-center text-white w-2/6 h-auto rounded-xl hover:bg-gray-500/50 hover:shadow-md hover:shadow-orange-500/70"> 
+            <img class="w-auto h-8 self-center m-auto hover:text-black" src="https://img.icons8.com/?size=100&id=1eYwaOomNLyl&format=png&color=FD7E14" alt="code-file"/>
+            <p class="text-black">  Projectos </p> 
+          </button>
+          </div>
+        </a>
+        <a href="/about">
+        <div class="flex">
+          <button class="flex-column text-center text-white w-2/6 h-auto rounded-xl hover:bg-gray-500/50 hover:shadow-md hover:shadow-orange-500/70"> 
+            <img class="w-auto h-8 self-center m-auto hover:text-black" src="https://img.icons8.com/?size=100&id=bEvWAmyOSHoH&format=png&color=FD7E14" alt="code-file"/>
+            <p class="text-black">  Sobre mí </p> 
+          </button>
+        </div>
+        </a>
+        <a href="#contact">
+          <div class="flex ">
+            <button class="flex-column text-center text-white w-2/6 h-auto rounded-xl hover:bg-gray-500/50 hover:shadow-md hover:shadow-orange-500/70"> 
+              <img class="w-auto h-8 self-center m-auto hover:text-black" src="https://img.icons8.com/?size=100&id=114083&format=png&color=FD7E14" alt="code-file"/>
+              <p class="text-black">  Contacto </p> 
+            </button>
+          </div>
+          </a>
+      </section>
 
     </header>

@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AboutComponent from "../components/About.astro";
+import DiplomaModal from "../components/diploma/DiplomaModal";
+---
+
+<BaseLayout>
+    <AboutComponent />
+    <DiplomaModal client:visible/>
+</BaseLayout>
