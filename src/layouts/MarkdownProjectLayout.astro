@@ -2,39 +2,28 @@
 import ProjectList from '../components/nav/projects/ProjectList.astro';
 import BaseLayout from './BaseLayout.astro';
 import {fade} from "astro:transitions";
-const { frontmatter } = Astro.props;
-
+const { frontmatter, content } = Astro.props;
+import  ProjectDetail  from '../components/ProjectDetail';
 ---
 
 <BaseLayout >
 
   <ProjectList />
     <section class="flex flex-col-3 md:flex-col-3 shadow-lg rounded-lg overflow-hidden mt-12 ml-4">
-  
-        <div class="tags text-white p-6">
-          <h3 class="text-white p-2">Tecnologías</h3>
-            {frontmatter.tags.map((tag) => ( 
-                <p class="tag hover:shadow-lg hover:shadow-orange-500/10 rounded-2xl px-2">
-                    <a href={`/tags/${tag}`}>{tag}</a>
-                </p>
-            ))}
-        </div>
      
-    <article class="flex  transition">
-      <div class="flex flex-col md:flex-row shadow-lg rounded-lg overflow-hidden">
-        <div class="md:w-auto">
-          <img class="w-auto h-auto object-cover md:h-full" src={frontmatter.img.url} alt={frontmatter.img.alt}>
-        </div>
-        <div class="p-6 md:w-1/2 backdrop-blur-lg text-white">
-          <h2 class="text-2xl font-bold mb-2">{frontmatter.title}</h2>
-          <p class="text-white mb-4"></p>
-          <slot />
-        </div>
-      </div>
-      </article>
-    </section>
-    <br>
+        <ProjectDetail
+        img={frontmatter.img}
+        title={frontmatter.title}
+        description={content}
+        videoUrl={frontmatter.video?.url}
+        repoUrl={frontmatter.repo.url}
+        deployUrl={frontmatter.deploy?.url}
+        tags={frontmatter.tags}
+      />
 
-   
+    </section>
+    
+    
+    <slot /> 
 
 </BaseLayout>

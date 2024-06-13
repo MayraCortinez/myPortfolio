@@ -12,6 +12,18 @@ const projectsCollection = defineCollection({
       alt: z.string()
     }), 
     date: z.date(),
+    video: z.object({
+      url: z.string(),
+      alt: z.string().optional()
+    }).optional(), 
+    repo: z.object({
+      url: z.string(),
+      alt: z.string()
+    }), 
+    deploy: z.object({
+      url: z.string(),
+      alt: z.string()
+    }).optional(), 
   })
 });
 

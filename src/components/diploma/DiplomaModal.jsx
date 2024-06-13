@@ -23,7 +23,7 @@ const DiplomaModal = () => {
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
         <div className="mx-auto max-w-lg text-center mb-6">
           <h2 className="text-3xl font-bold sm:text-4xl pb-12" data-aos="fade-up">Cursos certificados</h2>
-          <div className="cube pb-8" data-aos="fade-up">
+          <div className="cube pb-8 w-1/4" data-aos="fade-up">
             <ul className='ul-cube'>
               <li>
                 "Formación continua                  
@@ -45,13 +45,13 @@ const DiplomaModal = () => {
           {diplomas.map((diploma) => (
             <div
               key={diploma.id}
-              className="diploma flex-col mt-8 rounded-xl border backdrop-blur-2xl p-8 transition border-orange-400/10 shadow-orange-200/10"
+              className="group hover:shadow-sm diploma flex-col mt-8 rounded-xl border backdrop-blur-2xl p-8 transition border-orange-400/10 shadow-orange-200/10"
              
             >
             <div id='scroll-container' >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="size-10 text-orange-500 svg-diploma rounded-xl cursor-zoom-in hover:shadow-custom-orange focus:shadow-custom-orange"
+                className="size-10 text-orange-500 svg-diploma rounded-xl cursor-zoom-in hover:shadow-custom-orange"
                 id='animated-div'
                 fill="none"
                 viewBox="0 0 24 24"

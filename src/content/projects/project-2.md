@@ -7,6 +7,10 @@ img: {
     alt: "Logo My Project Manager"
 }
 date: 2023-02-02
+repo: {
+    url: "https://github.com/your-github-username/my-project-manager",
+    alt: "Repositorio de My Project Manager en GitHub"
+}
 ---
 
 

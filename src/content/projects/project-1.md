@@ -7,6 +7,14 @@ img: {
     alt: "Página de inicio My blog Astro"
 }
 date: 2024-05-02
+repo: {
+    url: "https://github.com/MayraCortinez/blogJson",
+    alt: "Repositorio de My blog Astro en GitHub"
+}
+deploy: {
+    url: "https://blogjsonastro.netlify.app/",
+    alt: "Página de My blog Astro, deploy en netlify"
+}
 ---
 
 Blog desarrollado con Astro, el potente framework de JavaScript.
