@@ -15,7 +15,11 @@ repo: {
     url: "https://github.com/DiCerso/grupo_5_Vive-Bio/tree/develop",
     alt: "repositorio ViveBio en GitHub"
 }
+description: "ViveBio es un e-commerce que permite a los usuarios registrar y gestionar información sobre productos de higiene personal, de origen natural, orgánicos, biodegradables y veganos.
+Desarrollado en un equipo de trabajo de 5 personas, utilizando el framework Express.js,
+conectado a una base de datos MySQL, y siguiendo el patrón de diseño
+MVC (Model-View-Controller). Utilizamos Scrum como metodología de trabajo y
+Trello para la gestión de tareas y seguimiento del proyecto.."
 ---
 
-ViveBio es un e-commerce que permite a los usuarios registrar y gestionar información sobre productos de higiene personal, de origen natural, orgánicos, biodegradables y veganos. 
-Se desarrolló como trabajo final integrador del curso Full Stack Javascript, brindado por Digital House Academy.
+

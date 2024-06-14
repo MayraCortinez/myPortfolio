@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+const projects = await getCollection('projects');
+---
+
+<ul class="text-white p-3 center items-center text-center m-auto flex gap-4 justify-center ">
+  {projects.map(project => (
+    <li>
+      <a class="p-2 hover:text-orange-200 hover:shadow-lg hover:shadow-orange-500/10 rounded-2xl" href={`/projects/${project.slug}`}>
+          {project.data.title}
+      </a>
+    </li>
+  ))}
+</ul>
+
+

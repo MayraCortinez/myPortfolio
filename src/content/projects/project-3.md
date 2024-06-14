@@ -19,11 +19,11 @@ deploy: {
   url: "https://reactjsgrupo5-43e69.web.app",
   alt: "Deploy de E-commerce ZUS en Netlify"
 }
+description: "E-commerce Sustentable de Zapatillas Deportivas. Esta aplicación utiliza React con Vite como bundler para el desarrollo del front-end y Firebase para el alojamiento y almacenamiento de datos. Validaciones frontend con React-Bootstrap. Validaciones backend códigos de errores de Firebase."
 ---
 
 
-E-commerce Sustentable de Zapatillas Deportivas.
-Trabajo final integrador del curso "Especialización en React" del programa Codo a Codo 4.0
+
 
 
 

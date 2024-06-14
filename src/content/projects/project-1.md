@@ -15,9 +15,14 @@ deploy: {
     url: "https://blogjsonastro.netlify.app/",
     alt: "Página de My blog Astro, deploy en netlify"
 }
+description: 
+    "My blog Astro es un proyecto de blog personalizado utilizando Astro.
+    El proyecto incluye autenticación con OAuth y TailwindCSS para el diseño.
+    La aplicación se despliega en Netlify.
+    Componentes - Layouts - Páginas - Modos de renderizado - Páginas dinámicas - Markdown - Islas - ViewTransitions - Autenticación."
+
 ---
 
-Blog desarrollado con Astro, el potente framework de JavaScript.
- Componentes - Layouts - Páginas - Modos de renderizado - Páginas dinámicas - Markdown - Islas - ViewTransitions - Autenticación.
+
 
 

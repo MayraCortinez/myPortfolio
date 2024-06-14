@@ -11,7 +11,6 @@ repo: {
     url: "https://github.com/your-github-username/my-project-manager",
     alt: "Repositorio de My Project Manager en GitHub"
 }
+description: "My Project Manager es una aplicación web de gestión de proyectos que te permite crear, editar y eliminar proyectos, así como asignar tareas. La aplicación utiliza tecnologías como React, Express, MongoDB y JWT para autenticar y autorizar a los usuarios."
 ---
 
-
-Aplicación de tareas con autenticación, desarrollada en el marco del curso "Refuerzo en React", brindado por Fundación Formar.

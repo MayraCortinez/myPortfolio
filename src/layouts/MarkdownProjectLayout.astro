@@ -1,29 +1,27 @@
 ---
-import ProjectList from '../components/nav/projects/ProjectList.astro';
 import BaseLayout from './BaseLayout.astro';
 import {fade} from "astro:transitions";
 const { frontmatter, content } = Astro.props;
 import  ProjectDetail  from '../components/ProjectDetail';
+import ProjectSlider from '../components/ProjectSlider.astro';
 ---
 
 <BaseLayout >
 
-  <ProjectList />
+  <ProjectSlider />
     <section class="flex flex-col-3 md:flex-col-3 shadow-lg rounded-lg overflow-hidden mt-12 ml-4">
-     
         <ProjectDetail
         img={frontmatter.img}
         title={frontmatter.title}
-        description={content}
+        description={frontmatter.description}
         videoUrl={frontmatter.video?.url}
         repoUrl={frontmatter.repo.url}
         deployUrl={frontmatter.deploy?.url}
         tags={frontmatter.tags}
+        client:visible
       />
 
     </section>
-    
-    
-    <slot /> 
+
 
 </BaseLayout>
