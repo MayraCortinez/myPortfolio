@@ -2,28 +2,27 @@
 import { getCollection } from 'astro:content';
 const projects = await getCollection('projects');
 ---
+<div class="">
+  <h2 class="text-4xl text-white font-bold my-8 text-center" data-aos="fade-up">Proyectos</h2>
 
-<h2 class="text-4xl text-white font-bold my-8 text-center" data-aos="fade-up">Proyectos</h2>
-
-<ul class="text-white p-3 flex center items-center w-3/4 text-center m-auto flex-col md:flex-row  gap-4 justify-center ">
-  {projects.map(project => (
-    <li>
-      <a class="p-2 hover:text-orange-200 hover:shadow-lg hover:shadow-orange-500/10 rounded-2xl" href={`/projects/${project.slug}`}>
-     
-      <div class="bg-black rounded-lg border border-orange-500 p-4 shadow-sm shadow-orange-500/20 hover:scale-y-105 transition:300 ">
-  <!-- Imagen -->
-  <img
-    src={project.data.img.url}
-    alt={project.data.img.alt}
-    class="w-full h-auto rounded-lg mb-4 bg-orange-500"
-  />
-
-  <!-- Título -->
-  <h2 class="text-white text-xl">{project.data.title}</h2>
+  <ul class="text-white p-3 flex flex-wrap center items-center w-3/4 text-center m-auto flex-col md:flex-row  gap-4 justify-center ">
+    {projects.map(project => (
+      <li class="w-1/3">
+        <a class="p-2 hover:text-orange-200 hover:shadow-lg hover:shadow-orange-500/10 rounded-2xl" href={`/projects/${project.slug}`}>
+       
+        <div class="bg-black rounded-lg border border-orange-500 p-4 shadow-sm shadow-orange-500/20 hover:scale-y-105 transition:300 ">
+    <!-- Imagen -->
+    <img
+      src={project.data.img.url}
+      alt={project.data.img.alt}
+      class="w-full h-auto rounded-lg mb-4 bg-orange-500"
+    />
+  
+    <!-- Título -->
+    <h2 class="text-white text-xl">{project.data.title}</h2>
+  </div>
+        </a>
+      </li>
+    ))}
+  </ul>  
 </div>
-      </a>
-    </li>
-  ))}
-</ul>
-
-

@@ -10,12 +10,12 @@ function ProjectDetail({ img, title, description, videoUrl, repoUrl, deployUrl, 
       <div className='flex flex-col items-center justify-center text-white mb-20'>
         <h2 className="text-3xl font-bold mb-8">{title}</h2>
         <div className="flex flex-row gap-4 justify-center items-center">
-          <a href={repoUrl} className="text-white justify-items-center flex w-48 bg-blue-500 hover:bg-blue-700 px-4 py-2 rounded">
+          <a href={repoUrl} className="text-white justify-items-center flex w-48 bg-blue-500 hover:bg-blue-700 px-4 py-2 rounded-2xl">
             <img className="w-6 h-6" src="/icon3.png" alt="ícono github" />
             <span className='w-2 pl-4'>Repositorio</span>
           </a>
           {deployUrl && (
-            <a href={deployUrl} className="text-white justify-items-center flex text-center w-48 bg-green-500 hover:bg-green-700 px-4 py-2 rounded">
+            <a href={deployUrl} className="text-white justify-items-center flex text-center w-48 bg-green-500 hover:bg-green-700 px-4 py-2 rounded-full">
               <img className="w-6 h-6" src="https://img.icons8.com/?size=100&id=wh2djijxoGnG&format=png&color=000000" alt="ícono deploy" />
               <span className='w-2 pl-4'>Deploy</span>
             </a>
@@ -42,13 +42,13 @@ function ProjectDetail({ img, title, description, videoUrl, repoUrl, deployUrl, 
         <div className="flex flex-col w-full lg:w-2/3">
           <div className="flex justify-center mb-4">
             <button
-              className={`text-xl px-4 py-2 ${showDescription ? 'bg-orange-500' : 'bg-gray-700'} text-white rounded-l-lg`}
+              className={`text-xl px-4 py-2 ${showDescription ? 'bg-gradient-to-r from-red-500 to-orange-500' : 'bg-gray-700'} text-white rounded-l-lg`}
               onClick={() => setShowDescription(true)}
             >
               Descripción
             </button>
             <button
-              className={`text-xl px-4 py-2 ${!showDescription ? 'bg-orange-500' : 'bg-gray-700'} text-white rounded-r-lg`}
+              className={`text-xl px-4 py-2 ${!showDescription ? 'bg-gradient-to-r from-red-500 to-orange-500' : 'bg-gray-700'} text-white rounded-r-lg`}
               onClick={() => setShowDescription(false)}
             >
               Tecnologías
@@ -63,7 +63,7 @@ function ProjectDetail({ img, title, description, videoUrl, repoUrl, deployUrl, 
             <div className="text-sm md:text-xl mb-4 text-white shadow-inner shadow-black rounded-xl p-4">
               <div className="flex flex-wrap items-center justify-center gap-1">
                 {tags.map((tag) => (
-                  <p className="cursor-pointer md:w-1/2  tag text-lg mr-2 mb-2 px-3 py-1 hover:bg-orange-500 shadow-md shadow-black rounded-2xl text-white bg-black transition duration-200" key={tag}>
+                  <p className="cursor-pointer md:w-1/2  tag text-lg mr-2 mb-2 px-3 py-1 shadow-md shadow-black rounded-2xl text-white bg-black tags transition duration-200" key={tag}>
                     <a href={`/tags/${tag}`}>{tag}</a>
                   </p>
                 ))}
