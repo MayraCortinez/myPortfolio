@@ -153,17 +153,17 @@ body {
 
 .parallax {
   /* URL de la imagen de fondo */
-  background-image: url('parallax.jpeg');
+  background-image: url('parallax.jpg');
   
   /* Fijar la imagen de fondo */
   background-attachment: fixed;
   
   /* Posición y tamaño del fondo */
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
   /* Altura de la sección */
-  height: 80vh;
+  height: 100%;
 }
 
 
@@ -228,26 +228,31 @@ body {
       overflow: hidden;
       width: 100%;
       height: 100vh;
-      background: linear-gradient(135deg, #000000, #000000, #ff8c0090);
-      background: radial-gradient(circle, rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), rgba(255, 140, 0, 0.323));
-      background-blend-mode: overlay;
     }
 
-    .cube-01,
-    .cube-02,
-    .cube-03,
-    .cube-04,
-    .cube-05 {
-      position: absolute;
-      height: 150px;
-      width: 150px;
-      border: 2px solid #ff8c00;
-      box-shadow: 0px 0px 20px 5px rgba(217, 119, 6, 0.8);
-      border-radius: 15px;
-      background: linear-gradient(135deg, #000000, #ff8c00c9);
-      background: radial-gradient(circle, rgba(0, 0, 0, 0.9), rgba(255, 140, 0, 0.5));
-      background-blend-mode: overlay;
+    .atropos-banner {
+      position: relative;
+      width: 100%;
+      height: 100%;
     }
+
+.cube-01,
+.cube-02,
+.cube-03,
+.cube-04,
+.cube-05 {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border: 2px solid #fd6900;
+  box-shadow: 0px 0px 20px 5px #fd3f00;
+  background: linear-gradient(135deg, #000000, #fd6500);
+  border-radius: 15px;
+  mix-blend-mode: screen;
+  box-shadow: 0px 0px 20px 5px rgba(253, 140, 1, 0.8);
+  background-blend-mode: overlay;
+  mix-blend-mode: screen;
+}
 
     .cube-01 {
       bottom: -6px;
@@ -331,6 +336,7 @@ body {
         transform: translate(250px, -150px) rotate(-370deg) scale(1.5);
       }
     }
+
 
 
 
@@ -449,9 +455,9 @@ overflow: hidden;
 
 /* Efecto máquina de escribir texto de introducción */
 .text-intro{
-  background-color: #18181863;
-  backdrop-filter: blur(10px);
-  height: 50vh;
+  background-color: #181818b0;
+  backdrop-filter: blur(6px);
+  height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -487,7 +493,7 @@ overflow: hidden;
   margin-top: 10%;
   overflow: hidden;
   background: linear-gradient(135deg, #000000, #ff8c0090);
-  background: radial-gradient(circle, rgba(255, 140, 0, 0.596), rgb(0, 0, 0));
+  background: radial-gradient(circle, rgba(253, 131, 0, 0.662), rgba(255, 140, 0, 0.382), rgb(0, 0, 0), rgb(0, 0, 0));
   background-blend-mode: overlay;
 }
 
@@ -610,17 +616,6 @@ overflow: hidden;
   }
 }
 
-/* slider proyectos */
-
-.swiper-container {
-  width: 100%;
-  height: 100%;
-}
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .banner {
   width: 100%;
@@ -633,4 +628,47 @@ overflow: hidden;
   box-sizing: border-box;
   opacity: 0.8;
   transition: opacity 0.2s ease-in;
+}
+
+
+/* Diploma acordeón */
+
+/* styles.css */
+.diploma-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 5%;
+}
+
+.diploma-list {
+  flex: 1;
+  padding-right: 20px;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.diploma-item {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+}
+
+.diploma-item:hover {
+  background-color: #fc62037a;
+}
+
+.diploma-item.active {
+  background-color: #fc6203;
+}
+
+.diploma-image {
+  flex: 1;
+}
+
+.diploma-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 16px;
 }
