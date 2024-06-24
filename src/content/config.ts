@@ -10,7 +10,7 @@ const projectsCollection = defineCollection({
     img: z.object({
       url: z.string(),
       alt: z.string()
-    }), 
+    }).optional(), 
     date: z.date(),
     video: z.object({
       url: z.string(),
@@ -19,7 +19,7 @@ const projectsCollection = defineCollection({
     repo: z.object({
       url: z.string(),
       alt: z.string()
-    }), 
+    }).optional(), 
     deploy: z.object({
       url: z.string(),
       alt: z.string()

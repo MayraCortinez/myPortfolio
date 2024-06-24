@@ -15,7 +15,7 @@ import ProjectSlider from '../components/ProjectSlider.astro';
         title={frontmatter.title}
         description={frontmatter.description}
         videoUrl={frontmatter.video?.url}
-        repoUrl={frontmatter.repo.url}
+        repoUrl={frontmatter.repo?.url}
         deployUrl={frontmatter.deploy?.url}
         tags={frontmatter.tags}
         client:visible

@@ -7,7 +7,7 @@
 
 input, button, textarea, select { font: inherit; }
 
-p { text-wrap: pretty; }
+p { text-wrap: pretty;   backdrop-filter: blur(8px); padding: 2px;}
 h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
 
 img, video, svg { height: auto; max-width: 100%; }
@@ -28,7 +28,6 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  backdrop-filter: blur(8px);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: url('imgBack.png');
@@ -36,6 +35,7 @@ body {
   background-size: cover;
   margin: 0;
   line-height: 1.6;
+  height: auto;
   overflow: scroll;
 }
 

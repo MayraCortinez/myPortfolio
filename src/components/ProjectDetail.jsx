@@ -10,10 +10,12 @@ function ProjectDetail({ img, title, description, videoUrl, repoUrl, deployUrl, 
       <div className='flex flex-col items-center justify-center text-white mb-20'>
         <h2 className="text-3xl font-bold mb-8">{title}</h2>
         <div className="flex flex-row gap-4 justify-center items-center">
+        {repoUrl && (
           <a href={repoUrl} className="text-white justify-items-center flex w-48 bg-blue-500 hover:bg-blue-700 px-4 py-2 rounded-2xl">
             <img className="w-6 h-6" src="/icon3.png" alt="ícono github" />
             <span className='w-2 pl-4'>Repositorio</span>
           </a>
+        )}
           {deployUrl && (
             <a href={deployUrl} className="text-white justify-items-center flex text-center w-48 bg-green-500 hover:bg-green-700 px-4 py-2 rounded-full">
               <img className="w-6 h-6" src="https://img.icons8.com/?size=100&id=wh2djijxoGnG&format=png&color=000000" alt="ícono deploy" />
@@ -26,11 +28,13 @@ function ProjectDetail({ img, title, description, videoUrl, repoUrl, deployUrl, 
       <div className="flex flex-col lg:flex-row lg:space-x-6 justify-between items-start">
         {/* Columna de Video */}
         <div className="bg-black/20 p-4 rounded-lg shadow-inner shadow-black">
+        {img && (
           <img
             className="w-full h-64 object-cover rounded md:object-contain"
             src={img.url}
             alt={img.alt}
           />
+        )}
           {videoUrl && (
             <div className="w-full lg:w-full p-4 mt-4 h-auto md:p-6 flex flex-col justify-between bg-black/20 rounded-lg shadow-md">
               <VideoComponent className="w-full h-full object-cover rounded" url={videoUrl} />
@@ -56,9 +60,9 @@ function ProjectDetail({ img, title, description, videoUrl, repoUrl, deployUrl, 
           </div>
 
           {showDescription ? (
-            <div className="text-sm md:text-xl mb-4 text-white shadow-inner shadow-black rounded-xl p-4">
+            <p className="text-sm md:text-xl mb-4 text-white shadow-inner shadow-black rounded-xl p-4">
               {description}
-            </div>
+            </p>
           ) : (
             <div className="text-sm md:text-xl mb-4 text-white shadow-inner shadow-black rounded-xl p-4">
               <div className="flex flex-wrap items-center justify-center gap-1">
