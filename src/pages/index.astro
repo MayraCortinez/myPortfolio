@@ -1,15 +1,7 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
-import SlideIndex from '../components/SlideIndex.astro';
-import DiplomaModal from '../components/diploma/DiplomaModal';
 const showBanner = true;
 ---
 
 <Layout showBanner={showBanner}>
-  <section class="bg-black">
-  <section class="pt-24 mb-24">
-    <SlideIndex />
-  </section>
-  <DiplomaModal client:visible />
-</section>
 </Layout>

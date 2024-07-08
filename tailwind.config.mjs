@@ -6,6 +6,9 @@ export default {
 			boxShadow: {
 				'custom-orange': '0px 0px 20px 5px #d97706ce',
 			  },
+			backgroundImage: {
+				'custom-image': "url('/public/imgBack.png')",
+			}
 		},
 	},
 	plugins: [],

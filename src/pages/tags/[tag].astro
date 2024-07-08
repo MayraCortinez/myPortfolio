@@ -18,11 +18,11 @@ const { projects } = Astro.props;
 ---
 
 <Layout pageTitle={tag}>
-  <h1 class="text-white">Projectos en los que se ha utilizado "{tag}"</h1>
+  <h1 class="text-white mb-4 bg-black text-xl text-center">Projectos en los que se ha utilizado "{tag}":</h1>
 <div>
-  <ul class="text-white p-3 center items-center text-center m-auto flex gap-4 justify-center border-b">
+  <ul class="text-white p-3 center items-center text-center m-auto flex flex-wrap gap-2 justify-center">
     {projects.map((project) => (
-    <li>
+    <li class="md:w-3/4 lg:w-1/3">
         <a class=" p-2 hover:text-orange-200 hover:shadow-lg hover:shadow-orange-500/10 rounded-2xl" href={`/projects/${project.slug}`}>
         
         

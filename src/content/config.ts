@@ -10,7 +10,7 @@ const projectsCollection = defineCollection({
     img: z.object({
       url: z.string(),
       alt: z.string()
-    }).optional(), 
+    }), 
     date: z.date(),
     video: z.object({
       url: z.string(),
@@ -40,7 +40,20 @@ const diplomasCollection = defineCollection({
 })
 });
 
+const softSkillsCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+  title: z.string(),
+  description: z.string(),
+  img: z.object({
+    url: z.string(),
+    alt: z.string()
+  })
+})
+});
+
 export const collections = {
   'projects': projectsCollection,
   'diplomas': diplomasCollection,
+  'soft-skills': softSkillsCollection
 };

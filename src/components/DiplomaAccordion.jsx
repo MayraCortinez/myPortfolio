@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { getCollection } from 'astro:content';
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+import { EffectCards } from 'swiper/modules';
 
 const DiplomaAccordion = () => {
   const [selectedDiploma, setSelectedDiploma] = useState(null);
@@ -10,38 +13,52 @@ const DiplomaAccordion = () => {
     const fetchDiplomas = async () => {
       const fetchedDiplomas = await getCollection('diplomas');
       setDiplomas(fetchedDiplomas);
+      if (fetchedDiplomas.length > 0) {
+        setSelectedDiploma(fetchedDiplomas[0].data);
+      }
     };
     fetchDiplomas();
   }, []);
 
-  const handleDiplomaClick = (id, img) => {
-    setSelectedDiploma({ id, img });
+  const handleSlideChange = (swiper) => {
+    const activeIndex = swiper.activeIndex;
+    setSelectedDiploma(diplomas[activeIndex].data);
   };
 
   return (
     <section className="text-white h-auto mt-24">
-    <h2 class="text-4xl font-bold mb-8 text-center" data-aos="fade-up">Cursos certificados</h2>
-      <div className="diploma-container">
-        <div className="diploma-list" data-aos="fade-left" data-aos-delay="600">
-          {diplomas.map((diploma) => (
-            <div
-              key={diploma.id}
-              className={`diploma-item ${selectedDiploma?.id === diploma.id ? 'active' : ''}`}
-              onClick={() => handleDiplomaClick(diploma.id, diploma.data.img)}
-            >
-              <h2 className="mt-4 text-xl font-bold text-white">{diploma.data.title}</h2>
-              <p className="mt-1 text-sm text-gray-300">{diploma.data.description}</p>
-            </div>
-          ))}
+      <h2 className="text-4xl font-bold mb-6 text-center" data-aos="fade-up">Cursos certificados</h2>
+      <div className="diploma-container flex">
+        <div className="w-full md:w-1/2" data-aos="fade-left" data-aos-delay="600">
+          <Swiper
+            effect={'cards'}
+            grabCursor={true}
+            modules={[EffectCards]}
+            className="mySwiper"
+            onSlideChange={handleSlideChange}
+          >
+            {diplomas.map((diploma) => (
+              <SwiperSlide key={diploma.id}>
+                <div className="bg-black diploma-item p-4 rounded-xl border backdrop-blur-2xl transition border-orange-400/90 shadow-orange-200/70">
+                  <img src={diploma.data.img.url} alt={diploma.data.title} className="rounded-lg" />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
-        {selectedDiploma && (
-          <div className="diploma-image">
-            <img src={selectedDiploma.img.url} alt="Selected Diploma" />
-          </div>
-        )}
+        <div className="py-2 w-full md:w-1/2 flex flex-col items-center justify-center">
+          {selectedDiploma && (
+            <>
+              <p className="text-2xl text-white rounded-lg">{selectedDiploma.title}</p>
+              <p className="mt-1 text-md text-gray-300 rounded-lg">{selectedDiploma.description}</p>
+            </>
+          )}
+        </div>
       </div>
     </section>
   );
 };
 
 export default DiplomaAccordion;
+
+

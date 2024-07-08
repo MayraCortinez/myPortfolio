@@ -1,8 +1,12 @@
 ---
 slug: "project-5"
 title: "Utopía salvaje"
-tags: ["DeepBrain AI"]
+tags: ["DeepBrain AI", "ChatGPT"]
 date: 2023-06-11
+img: {
+    url: "/project5.jpeg",
+    alt: "Imágen producto ViveBio"
+}
 video: {
     url: "https://drive.google.com/file/d/1yy61QdXUSf1sxHOwG64EkSmPAK6KUlkw/preview",
     alt: "video presentación uTOPÍA SALVAJE"

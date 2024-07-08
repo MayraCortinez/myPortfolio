@@ -1,8 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import AboutComponent from "../components/About.astro";
+import DiplomaAccordion from "../components/DiplomaAccordion.jsx";
+import HardSkills from "../components/HardSkills.astro";
+import SliderSoftSkills from "../components/SliderSoftSkills.jsx";
 ---
 
 <BaseLayout showBanner={false}>
     <AboutComponent />
+    <SliderSoftSkills client:visible />
+    <HardSkills />
+    <DiplomaAccordion client:visible />
 </BaseLayout>
