@@ -2,14 +2,14 @@
 import { Image } from 'astro:assets';
 import me from '../../public/me.jpg';
 ---
-<section id="sobre-mi" class="text-white py-16">
+<section id="sobre-mi" class="text-white py-16 text-center">
   <div class="container mx-auto">
     <h2 class="text-4xl font-bold mb-8 text-center" data-aos="fade-up">Sobre mí</h2>
     <div class="flex flex-col lg:flex-row items-center" data-aos="fade-up" data-aos-delay="200">
       <div class="w-full lg:w-1/2 mb-8 lg:mr-8 rounded-full" data-aos="zoom-in-up">
-        <Image src={me} alt="Mi Foto" class="rounded-full shadow-lg mx-auto h-96 w-96 object-cover" />
+        <Image src={me} alt="Mi Foto" class="rounded-full shadow-lg mx-auto h-48 w-48 md:h-96 md:w-96 object-cover" />
       </div>
-      <div class="w-full lg:w-1/2 lg:pl-6 pb-6" data-aos="fade-left" data-aos-delay="400">
+      <div class="w-full lg:w-1/2 lg:pl-6 pb-6 m-auto" data-aos="fade-left" data-aos-delay="400">
         <p class="text-lg leading-relaxed text-gray-300 rounded-2xl p-4 mb-6">
           ¡Hola! Soy Mayra, una desarrolladora web Full Stack con pasión por la evolución tecnológica. Tengo experiencia en el desarrollo de aplicaciones web con diseño responsivo. Me encanta trabajar en proyectos que involucren desafíos, y siempre estoy buscando nuevas oportunidades para aprender y crecer.
         </p>
@@ -25,12 +25,12 @@ import me from '../../public/me.jpg';
 </section>
 <section id="sobre-mi-2" class="text-white py-16">
   <div class="container mx-auto">
-    <div class="flex flex-col md:flex-row items-center" data-aos="fade-up" data-aos-delay="200">
-      <div class="w-full mb-8 md:mb-0 rounded-full order-1 md:order-2" data-aos="zoom-in-up">
-        <img src="/about2.jpg" alt="foto árbol y lapices" class="rounded-full shadow-lg mx-auto h-96 w-96 object-cover" />
+    <div class="flex flex-col lg:flex-row items-center" data-aos="fade-up" data-aos-delay="200">
+      <div class="w-full mb-8 lg:mb-0 rounded-full order-1 lg:order-2" data-aos="zoom-in-up">
+        <img src="/about2.jpg" alt="foto árbol y lapices" class="rounded-full shadow-lg m-auto h-48 w-48 md:h-96 md:w-96 lg:w-full lg:h-full object-cover" />
       </div>
-      <div class="w-full md:pr-3 order-2 md:order-1" data-aos="fade-left" data-aos-delay="400">
-        <p class="text-lg leading-relaxed text-gray-300 rounded-2xl p-4 mb-6">
+      <div class="w-full lg:pr-3 order-2 lg:order-1" data-aos="fade-left" data-aos-delay="400">
+        <p class="text-lg text-center leading-relaxed text-gray-300 rounded-2xl p-4 mb-6">
           Soy una ferviente defensora de la esencial conexión con la naturaleza. En mis tiempos libres disfruto de una buena lectura, mezclar música y encuentro distención en la escritura. Siempre estoy dispuesta a conectar con personas que compartan mis ideales o que tengan proyectos interesantes en los que pueda colaborar.
         </p>
         <a href="/projects" 
