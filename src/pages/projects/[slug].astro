@@ -22,7 +22,8 @@ if (project) {
 }
 
 const { Content } = await project.render();
+
 ---
-<MarkdownProjectLayout frontmatter={project.data}>
+<MarkdownProjectLayout frontmatter={project.data} >
   <Content  />
 </MarkdownProjectLayout>

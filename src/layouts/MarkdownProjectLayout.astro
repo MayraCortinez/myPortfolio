@@ -4,9 +4,10 @@ const { frontmatter, content } = Astro.props;
 import  ProjectDetail  from '../components/nav/projects/ProjectDetail';
 import ProjectSlider from '../components/nav/projects/ProjectSlider';
 import ProjectListTitle from '../components/nav/projects/ProjectListTitle.astro';
+
 ---
 
-<BaseLayout >
+<BaseLayout pageTitle={frontmatter.title}>
 
   <ProjectSlider client:visible />
   <ProjectListTitle />

@@ -7,25 +7,26 @@ import { ViewTransitions } from "astro:transitions";
 import 'aos/dist/aos.css';
 const showBanner = Astro.props.showBanner;
 import logo from '../../public/code.png';
+const {pageTitle} = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" transition:animate="none">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/code.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-    <title>Mi Portafolio</title>
+    <title>{pageTitle}</title>
     <ViewTransitions />
-    </head>
+  </head>
     <body class="min-h-screen w-full flex flex-col">
-    <Header/>
+    <Header transition:animate="fade"/>
     {showBanner && (
       <section class="banner w-full">
         <Banner client:visible/>
       </section>
     )}
-    <main class="p-8 w-full lg:px-24 h-full m-auto">
+    <main class="p-8 w-full lg:px-24 h-full m-auto" transition:animate="none">
       <slot />
     </main>
     <Footer />

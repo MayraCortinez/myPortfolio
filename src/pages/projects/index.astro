@@ -1,11 +1,6 @@
 ---
-import { getCollection } from 'astro:content';
 import Layout from "../../layouts/BaseLayout.astro";
 import ProjectList from '../../components/nav/projects/ProjectList.astro';
-
-
-const projects = await getCollection('projects');
-
 const pageTitle = "Índice de proyectos"; /* Defino un título de página  */
 ---
 

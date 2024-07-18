@@ -4,9 +4,10 @@ import AboutComponent from "../components/About.astro";
 import DiplomaAccordion from "../components/DiplomaAccordion.jsx";
 import HardSkills from "../components/HardSkills.astro";
 import SliderSoftSkills from "../components/SliderSoftSkills.jsx";
+const pageTitle = "Sobre mí";
 ---
 
-<BaseLayout showBanner={false}>
+<BaseLayout showBanner={false} pageTitle={pageTitle}>
     <AboutComponent />
     <SliderSoftSkills client:visible />
     <HardSkills />
