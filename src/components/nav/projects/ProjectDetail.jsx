@@ -6,7 +6,7 @@ function ProjectDetail({ img, title, description, videoUrl, repoUrl, deployUrl, 
   const [showDescription, setShowDescription] = useState(true);
 
   return (
-    <article className="container mx-0 mb-6 text-center items-start pt-3 p-4 md:p-6 lg:p-12 bg-gray-400/10 rounded-lg shadow-inner shadow-orange-500">
+    <article className="container mx-0 mb-6 text-center items-start p-4 md:p-6 lg:p-12 bg-gray-400/10 rounded-lg shadow-inner shadow-orange-500 h-full overflow-scroll lg:overflow-hidden">
       {/* Columna de Título y Enlaces */}
       <div className='flex flex-col items-center justify-center lg:w-1/2 text-white my-6 mx-auto'>
         <h2 className="text-3xl font-bold mb-8">{title}</h2>
@@ -44,7 +44,7 @@ function ProjectDetail({ img, title, description, videoUrl, repoUrl, deployUrl, 
         </div>
 
         {/* Contenedor para Descripción o Tecnologías */}
-        <div className="flex flex-col w-full mt-3 lg:mt-0 lg:w-1/2">
+        <div className="flex flex-col w-full my-3 lg:mt-0 lg:w-1/2">
           <div className="flex justify-start">
             <button
               className={`text-xl py-1 ${showDescription ? 'bg-gradient-to-t from-black to-orange-500' : 'bg-gradient-to-t from-black to-gray-700'} text-white rounded-l-lg`}
@@ -70,7 +70,7 @@ function ProjectDetail({ img, title, description, videoUrl, repoUrl, deployUrl, 
               <div className="text-sm md:text-xl mb-4 text-white shadow-inner shadow-black rounded-xl p-4">
                 <div className="flex flex-wrap items-center justify-center">
                   {tags.map((tag) => (
-                    <p className="cursor-pointer md:w-1/3 text-lg m-1 py-1 shadow-md shadow-black rounded-2xl text-white bg-black tags transition duration-200" key={tag}>
+                    <p className="cursor-pointer sm:w-1/3 text-lg m-1 py-1 shadow-md shadow-black rounded-2xl text-white bg-black tags transition duration-200" key={tag}>
                       <a href={`/tags/${tag}`}>{tag}</a>
                     </p>
                   ))}
