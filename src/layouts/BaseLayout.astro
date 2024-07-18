@@ -6,8 +6,7 @@ import Footer from '../components/Footer.astro';
 import { ViewTransitions } from "astro:transitions";
 import 'aos/dist/aos.css';
 const showBanner = Astro.props.showBanner;
-import logo from '../../public/code.png';
-const {pageTitle} = Astro.props;
+const {pageTitle, logo} = Astro.props;
 ---
 
 <html lang="en" transition:animate="none">
@@ -19,14 +18,14 @@ const {pageTitle} = Astro.props;
     <title>{pageTitle}</title>
     <ViewTransitions />
   </head>
-    <body class="min-h-screen w-full flex flex-col">
-    <Header transition:animate="fade"/>
+    <body class="min-h-screen w-full flex flex-col" transition:animate="none">
+    <Header/>
     {showBanner && (
       <section class="banner w-full">
         <Banner client:visible/>
       </section>
     )}
-    <main class="p-8 w-full lg:px-24 h-full m-auto" transition:animate="none">
+    <main class="p-8 w-full lg:px-24 h-full m-auto">
       <slot />
     </main>
     <Footer />
