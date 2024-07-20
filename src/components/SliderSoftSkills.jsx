@@ -21,7 +21,6 @@ const SoftSkillsCarousel = () => {
   return (
     <>
         <section className="text-white h-auto mt-24 ">
-        <h2 className="text-4xl font-bold mb-16 text-center" data-aos="fade-up">Habilidades</h2>
     <div className="relative rounded-xl">
       <Swiper
         effect={'coverflow'}
