@@ -1,65 +1,40 @@
 ---
+// src/pages/index.astro
+
 const currentPath = Astro.url.pathname;
 
-const anim = {
-  old: {
-    name: 'fadeIn',
-    duration: '0.5s',
-    easing: 'linear',
-    fillMode: 'forwards',
-  },
-  new: {
-    name: 'fadeOut',
-    duration: '0.7s',
-    easing: 'linear',
-    fillMode: 'backwards',
-  }
-};
-
-const myFade = {
-  forwards: anim,
-  backwards: anim,
-};
-
-const logoPath = '/code.png'
+const logoPath = '/code.png';
 ---
 
-<header class="header bg-gradient-to-b from-black to-transparent text-sm md:text-base lg:text-lg sticky top-0 z-50" transition:animate={myFade}>
-  <section class="container mx-auto flex justify-evenly items-center">
-    <a href="/" class="w-1/3 flex items-center space-x-2" transition:persist>
-      <img src={logoPath} alt="Logo" class="h-8 w-auto" />
-      <h1 class="hidden md:block text-gradient-to-r from-red-500 to-orange-500 text-xl hover:text-orange-400">Cortinez Mayra</h1>
-    </a>
-    <ul class="flex flex-row items-center justify-end gap-4">
-      <li class="custom-btn btn-7">
-        <a href="/projects" class={`btn-7 ${currentPath === '/projects' ? 'active' : ''}`}>
-          <button class="text-white/70">Proyectos</button>
+<html>
+  <head>
+    <title>Mi Portafolio</title>
+  </head>
+  <body>
+    <header class="header bg-gradient-to-b from-black to-transparent text-sm md:text-base lg:text-lg sticky top-0 z-50">
+      <section class="container mx-auto flex justify-evenly items-center">
+        <a href="/index2" class="w-1/3 flex items-center space-x-2">
+          <img src={logoPath} alt="Logo" class="h-8 w-auto" />
+          <h1 class="hidden md:block text-gradient-to-r from-red-500 to-orange-500 text-xl hover:text-orange-400">Cortinez Mayra</h1>
         </a>
-      </li>
-      <li class="custom-btn btn-7">
-        <a href="/about" class={`btn-7 ${currentPath === '/about' ? 'active' : ''}`}>
-          <button class="text-white/70">Sobre mí</button>
-        </a>
-      </li>
-      <li class="custom-btn btn-7">
-        <a href="#contact" class={`btn-7 ${currentPath === '/contact' ? 'active' : ''}`}>
-          <button class="text-white/70">Contacto</button>
-        </a>
-      </li>
-    </ul>
-  </section>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const currentPath = window.location.pathname;
-      const links = document.querySelectorAll('a');
-  
-      links.forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
-</header>
-
-
+        <ul class="flex flex-row items-center justify-end gap-4">
+          <li class="custom-btn btn-7">
+            <a href="/projects" class={`btn-7 ${currentPath === '/projects' ? 'active' : ''}`}>
+              <button class="text-white/70">Proyectos</button>
+            </a>
+          </li>
+          <li class="custom-btn btn-7">
+            <a href="/" class={`btn-7 ${currentPath === '/' ? 'active' : ''}`}>
+              <button class="text-white/70">Sobre mí</button>
+            </a>
+          </li>
+          <li class="custom-btn btn-7">
+            <a href="#contact" class={`btn-7 ${currentPath === '/contact' ? 'active' : ''}`}>
+              <button class="text-white/70">Contacto</button>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </header>
+  </body>
+</html>

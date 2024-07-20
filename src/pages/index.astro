@@ -1,8 +1,15 @@
 ---
-import Layout from '../layouts/BaseLayout.astro';
-const showBanner = true;
-const pageTitle = "Página de inicio"
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AboutComponent from "../components/About.astro";
+import DiplomaAccordion from "../components/DiplomaAccordion.jsx";
+import HardSkills from "../components/HardSkills.astro";
+import SliderSoftSkills from "../components/SliderSoftSkills.jsx";
+const pageTitle = "Sobre mí";
 ---
 
-<Layout showBanner={showBanner} pageTitle={pageTitle}>
-</Layout>
+<BaseLayout showBanner={false} pageTitle={pageTitle}>
+    <AboutComponent />
+    <HardSkills />
+    <SliderSoftSkills client:visible />
+    <DiplomaAccordion client:visible />
+</BaseLayout>
