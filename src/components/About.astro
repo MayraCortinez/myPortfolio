@@ -1,13 +1,12 @@
 ---
-import { Image } from 'astro:assets';
-import me from '../../public/me.jpg';
+
 ---
 <section id="" class="text-white py-16 text-center mx-auto w-full">
   <div class="mx-auto">
     <h2 class="text-4xl font-bold mb-8 text-center">Sobre mí</h2>
     <div class="flex flex-col lg:flex-row items-center" >
       <div class="w-full lg:w-1/2 mb-8 lg:mr-8 rounded-full" >
-        <Image src={me} alt="Mi Foto" class="rounded-full shadow-lg mx-auto h-48 w-48 md:h-96 md:w-96 object-cover" />
+        <img src='/me.jpg' alt="Mi Foto" class="rounded-full shadow-lg mx-auto h-48 w-48 md:h-96 md:w-96 object-cover" />
       </div>
       <div class="w-full lg:w-1/2 lg:pl-6 pb-6 m-auto" >
         <p class="text-lg leading-relaxed text-gray-300 rounded-2xl p-4 mb-6">
