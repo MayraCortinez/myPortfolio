@@ -36,8 +36,6 @@ const SoftSkillsCarousel = () => {
         }}
         pagination={true}
         modules={[EffectCoverflow, Pagination]}
-        data-aos="fade-up"
-        className='rounded-xl'
       >
         {softSkills.map((softSkill) => (
           <SwiperSlide className='swiper-lide rounded-xl' key={softSkill.id}>

@@ -45,11 +45,11 @@ body {
 .header {
   backdrop-filter: blur(16px);
   color: white;
-  padding: 20px;
+  padding-top: 20px;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 90%;
   height: 10%;
 }
 
@@ -435,7 +435,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 5%;
-  width: 100%;
+  width: 90%;
   height: auto;
 }
 
@@ -475,26 +475,25 @@ body {
 
 /* SLIDER SOFT SKILLS */
 .mySwiperSoftSkills {
-  width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
   width: 90%;
   height: 70vh;
   overflow: hidden;
+  margin: auto;
 }
 
+
 .mySwiperSoftSkills .swiper-slide {
+  width: 100%;
+  height: auto;
   background-position: center;
   background-size: cover;
-  width: 100%;
-  height: 100%;
   overflow: hidden;
 }
 
 .mySwiperSoftSkills .swiper-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   overflow: hidden;
 }
@@ -512,118 +511,6 @@ body {
   color: #fe6100; 
 }
 
-
-/* Animación formulario contacto */
-.ContactRing{
-  position: relative;
-  width: 50%;
-  height: 80%;
-  right: 0%;
-  left: 0%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  align-content: center;
-  flex-wrap: wrap;
-  padding: 18rem;
-}
-.ContactRing i {
-  position: absolute;
-  inset: 0;
-  border: 2px solid #fff;
-  transition: 0.5s;
-}
-.ContactRing i:nth-child(1) {
-  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-  animation: animate 6s linear infinite;
-}
-.ContactRing i:nth-child(2) {
-  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
-  animation: animate 4s linear infinite;
-}
-.ContactRing i:nth-child(3) {
-  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
-  animation: animate2 10s linear infinite;
-}
-.ContactRing:hover i {
-  border: 6px solid var(--clr);
-  filter: drop-shadow(0 0 20px var(--clr));
-}
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes animate2 {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-.ContactName {
-  position: absolute;
-  width: 50%;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 15px;
-}
-.ContactName h2 {
-  font-size: 2em;
-  color: #fff;
-}
-.ContactName .inputBx {
-  position: relative;
-  width: 100%;
-}
-.ContactName .inputBx input {
-  position: relative;
-  width: 100%;
-  padding: 12px 20px;
-  background: transparent;
-  border: 2px solid #fff;
-  border-radius: 40px;
-  font-size: 1.2em;
-  color: #fff;
-  box-shadow: none;
-  outline: none;
-}
-.ContactName .inputBx input[type="submit"] {
-  width: 100%;
-  background: #ff2a00;
-  background: linear-gradient(45deg, #fd3f00, #ffbd72);
-  border: none;
-  cursor: pointer;
-}
-.ContactName .inputBx input::placeholder {
-  color: rgba(255, 255, 255, 0.75);
-}
-.ContactName .links {
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-}
-.ContactName.links a {
-  color: #fff;
-  text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  .ContactRing{
-    width: 20%;
-  }
-}
 
 
 /*títulos proyectos en projectDetail*/

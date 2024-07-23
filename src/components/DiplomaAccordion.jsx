@@ -27,9 +27,9 @@ const DiplomaAccordion = () => {
 
   return (
     <section className="text-white h-auto mt-24">
-      <h2 className="text-4xl font-bold mb-16 text-center" data-aos="fade-up">Cursos certificados</h2>
+      <h2 className="text-4xl font-bold mb-16 text-center">Cursos certificados</h2>
       <div className="diploma-container flex">
-        <div className="w-full md:w-1/2" data-aos="fade-left" data-aos-delay="600">
+        <div className="w-full md:w-1/2">
           <Swiper
             effect={'cards'}
             grabCursor={true}

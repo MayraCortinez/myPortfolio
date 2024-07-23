@@ -4,7 +4,6 @@ import Header from '../components/Header.astro';
 import Banner from '../components/Banner.jsx';
 import Footer from '../components/Footer.astro';
 import { ViewTransitions } from "astro:transitions";
-import 'aos/dist/aos.css';
 const showBanner = Astro.props.showBanner;
 const {pageTitle} = Astro.props;
 ---
@@ -29,12 +28,6 @@ const {pageTitle} = Astro.props;
       <slot />
     </main>
     <Footer />
-    <script is:inline src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        AOS.init();
-      });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+      <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   </body>
 </html>
