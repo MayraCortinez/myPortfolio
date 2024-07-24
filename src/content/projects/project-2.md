@@ -8,7 +8,7 @@ img: {
 }
 date: 2023-02-02
 repo: {
-    url: "https://github.com/your-github-username/my-project-manager",
+    url: "https://github.com/MayraCortinez/MYPROJECTMANAGER",
     alt: "Repositorio de My Project Manager en GitHub"
 }
 description: "My Project Manager es una aplicación web de gestión de proyectos que te permite crear, editar y eliminar proyectos, así como asignar tareas. La aplicación utiliza tecnologías como React, Express, MongoDB y JWT para autenticar y autorizar a los usuarios."
