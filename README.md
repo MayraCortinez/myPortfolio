@@ -1,14 +1,32 @@
-# Astro Starter Kit: Minimal
+# Portfolio de Mayra Cortinez
 
-```sh
-npm create astro@latest -- --template minimal
-```
+¡Bienvenido/a a mi portfolio! Este proyecto ha sido creado para mostrar mis habilidades y proyectos en desarrollo web, utilizando tecnologías modernas como Astro, Tailwind CSS, y Swiper.js.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+![Portfolio Screenshot](public/screenshot.png)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Descripción
+
+Este portfolio ha sido desarrollado con Astro, una herramienta de construcción de sitios estáticos que permite crear sitios web rápidos y modernos. La estructura del sitio es responsive, asegurando que se vea bien en dispositivos móviles y de escritorio. Además, he integrado Swiper.js para mostrar mis proyectos de manera interactiva y atractiva.
+
+## Características
+
+- **Diseño Responsivo**: Optimizado para dispositivos móviles y de escritorio utilizando Tailwind CSS.
+- **Animaciones Suaves**: Implementadas con Swiper.js para una navegación fluida entre los proyectos.
+- **Parallax Scrolling**: Utilizado en la sección de la página principal para destacar las funcionalidades y ventajas del sitio.
+- **Rutas Dinámicas**: Implementadas con `getStaticPaths` de Astro para generar páginas estáticas dinámicamente.
+- **Uso de Props**: Manejo de propiedades dentro de componentes de Astro para modularidad y reutilización de código.
+- **Optimización**: Logré un 100% en performance y un 90% en estructura en GTmetrix.
+
+## Tecnologías Utilizadas
+
+- **Astro**: Framework principal para la construcción del sitio.
+- **Tailwind CSS**: Utilizado para el diseño y estilos responsivos.
+- **Swiper.js**: Para las animaciones y presentaciones de proyectos.
+- **JavaScript**: Para la lógica y las interacciones dinámicas.
+
+## Estructura del Proyecto
+
+
 
 ## 🚀 Project Structure
 
