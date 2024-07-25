@@ -26,8 +26,8 @@ const DiplomaAccordion = () => {
   };
 
   return (
-    <section className="text-white h-auto mt-24">
-      <h2 className="text-4xl font-bold mb-16 text-center">Cursos certificados</h2>
+    <section className="text-white h-auto mt-32">
+      <h2 className="text-4xl font-bold mb-8 text-center">Cursos certificados</h2>
       <div className="diploma-container flex">
         <div className="w-full md:w-1/2">
           <Swiper
@@ -39,7 +39,7 @@ const DiplomaAccordion = () => {
           >
             {diplomas.map((diploma) => (
               <SwiperSlide key={diploma.id}>
-                <div className="bg-black diploma-item p-4 rounded-xl border backdrop-blur-2xl transition border-orange-400/90 shadow-orange-200/70">
+                <div className="bg-black diploma-item hover:bg-gradient-to-t from-transparent to-orange-500 p-4 rounded-xl border-4 backdrop-blur-2xl hover:border-orange-500 transition border-orange-500/40 shadow-orange-200/70">
                   <img src={diploma.data.img.url} alt={diploma.data.title} className="rounded-lg" />
                 </div>
               </SwiperSlide>

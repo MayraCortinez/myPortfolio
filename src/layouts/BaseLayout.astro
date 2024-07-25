@@ -9,23 +9,23 @@ const {pageTitle} = Astro.props;
 
 ---
 
-<html lang="en" transition:animate="none">
+<html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/code.png" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
     <ViewTransitions />
   </head>
-    <body class="min-h-screen w-full flex flex-col" transition:animate="none">
+    <body class="min-h-screen w-full flex flex-col">
     <Header/>
     {showBanner && (
       <section class="banner w-full">
         <Banner client:visible/>
       </section>
     )}
-    <main class="px-8 w-full lg:px-24 h-full m-auto pb-32 border-b border-orange-500">
+    <main class="p-8 w-full lg:px-24 h-full m-auto pb-32 border-b border-orange-500">
       <slot />
     </main>
     <Footer />

@@ -6,9 +6,9 @@ function ProjectDetail({ img, title, description, videoUrl, repoUrl, deployUrl, 
   const [showDescription, setShowDescription] = useState(true);
 
   return (
-    <article className="container mx-0 mb-6 text-center items-start p-4 md:p-6 lg:p-12 bg-gray-400/10 rounded-lg shadow-inner shadow-orange-500 h-full overflow-scroll lg:overflow-hidden">
+    <article className="block mx-0 mb-6 text-center items-start p-4 md:p-6 lg:p-12 bg-gray-400/10 rounded-lg shadow-inner shadow-orange-500 h-full overflow-scroll lg:overflow-hidden">
       {/* Columna de Título y Enlaces */}
-      <div className='flex flex-col items-center justify-center lg:w-1/2 text-white my-6 mx-auto'>
+      <div className='flex flex-col items-center justify-center lg:w-1/2 text-white mt-3 mb-6 mx-auto'>
         <h2 className="text-3xl font-bold mb-8">{title}</h2>
         <div className="flex flex-col md:flex-row mb-3 gap-3 justify-center items-center">
         {repoUrl && (
@@ -62,9 +62,9 @@ function ProjectDetail({ img, title, description, videoUrl, repoUrl, deployUrl, 
 
           <div className="relative">
             <div className={`absolute inset-0 transition-opacity duration-300 ${showDescription ? 'opacity-100' : 'opacity-0'} ${showDescription ? 'block' : 'hidden'}`}>
-              <p className="text-sm md:text-xl mb-4 text-white shadow-inner shadow-black rounded-xl p-4">
+              <h4 className="text-sm md:text-xl mb-4 text-white shadow-inner shadow-black rounded-xl p-4">
                 {description}
-              </p>
+              </h4>
             </div>
             <div className={`absolute inset-0 transition-opacity duration-300 ${showDescription ? 'opacity-0' : 'opacity-100'} ${showDescription ? 'hidden' : 'block'}`}>
               <div className="text-sm md:text-xl mb-4 text-white shadow-inner shadow-black rounded-xl p-4">
