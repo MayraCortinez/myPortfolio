@@ -72,5 +72,5 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
 ## 👀 Want to know more?
-Contact me ![LinkedIn](https://www.linkedin.com/in/mayra-cortinez-/)
+Contact me on [LinkedIn](https://www.linkedin.com/in/mayra-cortinez-/)
 
