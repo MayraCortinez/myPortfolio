@@ -1,32 +1,27 @@
-# Portfolio de Mayra Cortinez
+# Portfolio of Mayra Cortinez
 
-¡Bienvenido/a a mi portfolio! Este proyecto ha sido creado para mostrar mis habilidades y proyectos en desarrollo web, utilizando tecnologías modernas como Astro, Tailwind CSS, y Swiper.js.
+Welcome to my portfolio! This project has been created to showcase my skills and projects in web development, utilizing modern technologies such as Astro, Tailwind CSS, and Swiper.js.
 
 ![Portfolio Screenshot](public/screenshot.png)
 
-## Descripción
+## Description
 
-Este portfolio ha sido desarrollado con Astro, una herramienta de construcción de sitios estáticos que permite crear sitios web rápidos y modernos. La estructura del sitio es responsive, asegurando que se vea bien en dispositivos móviles y de escritorio. Además, he integrado Swiper.js para mostrar mis proyectos de manera interactiva y atractiva.
+This portfolio has been developed with Astro, a static site generator that enables the creation of fast and modern websites. The site's structure is responsive, ensuring it looks good on both mobile and desktop devices. Additionally, I have integrated Swiper.js to display my projects in an interactive and attractive manner.
 
-## Características
+## Features
 
-- **Diseño Responsivo**: Optimizado para dispositivos móviles y de escritorio utilizando Tailwind CSS.
-- **Animaciones Suaves**: Implementadas con Swiper.js para una navegación fluida entre los proyectos.
-- **Parallax Scrolling**: Utilizado en la sección de la página principal para destacar las funcionalidades y ventajas del sitio.
-- **Rutas Dinámicas**: Implementadas con `getStaticPaths` de Astro para generar páginas estáticas dinámicamente.
-- **Uso de Props**: Manejo de propiedades dentro de componentes de Astro para modularidad y reutilización de código.
-- **Optimización**: Logré un 100% en performance y un 90% en estructura en GTmetrix.
+- **Responsive Design**: Optimized for mobile and desktop devices using Tailwind CSS.
+- **Smooth Animations**: Implemented with Swiper.js for fluid navigation between projects.
+- **Dynamic Routes**: Implemented with Astro's `getStaticPaths` to generate static pages dynamically.
+- **Props Usage**: Handling of properties within Astro components for modularity and code reuse.
+- **Optimization**: Achieved 99% in performance and 94% in structure on GTmetrix.
 
-## Tecnologías Utilizadas
+## Technologies Used
 
-- **Astro**: Framework principal para la construcción del sitio.
-- **Tailwind CSS**: Utilizado para el diseño y estilos responsivos.
-- **Swiper.js**: Para las animaciones y presentaciones de proyectos.
-- **JavaScript**: Para la lógica y las interacciones dinámicas.
-
-## Estructura del Proyecto
-
-
+- **Astro**: The main framework for building the site.
+- **Tailwind CSS**: Used for responsive design and styling.
+- **Swiper.js**: For animations and project presentations.
+- **JavaScript**: For logic and dynamic interactions.
 
 ## 🚀 Project Structure
 
@@ -36,17 +31,34 @@ Inside of your Astro project, you'll see the following folders and files:
 /
 ├── public/
 ├── src/
+│   └── components/
+│       └── Header.astro
+│   └── content/
+│       └── diplomas
+|        └── config.ts
+│            └── diploma-01.md
+|           └── ...
+|       └── projects
+|       └── softSkills
+|       └── config.ts
+│   └── layouts/
+│       └── BaseLayout.astro
+|       └── MarkdownProjectLayout.astro
 │   └── pages/
+│       └── projects
+│           └── [slug].astro
+│           └── index.astro
+│       └── tags
+│           └── [slug].astro
+│           └── index.astro
 │       └── index.astro
+├── utils
+│   └── getUniqueTags.js
+├── styles
+│   └── global.css
 └── package.json
+
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
@@ -60,6 +72,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 👀 Want to know more?
+Contact me ![LinkedIn](https://www.linkedin.com/in/mayra-cortinez-/)
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
