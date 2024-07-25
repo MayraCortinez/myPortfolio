@@ -2,7 +2,7 @@
 
 ¡Bienvenido/a a mi portfolio! Este proyecto ha sido creado para mostrar mis habilidades y proyectos en desarrollo web, utilizando tecnologías modernas como Astro, Tailwind CSS, y Swiper.js.
 
-![Portfolio Screenshot]!(public/screenshot.png)
+![Portfolio Screenshot](public/screenshot.png)
 
 ## Descripción
 
