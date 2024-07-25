@@ -1,6 +1,6 @@
-# Portfolio of Mayra Cortinez
+# Welcome to my portfolio!
 
-Welcome to my portfolio! This project has been created to showcase my skills and projects in web development, utilizing modern technologies such as Astro, Tailwind CSS, and Swiper.js.
+This project has been created to showcase my skills and projects in web development, utilizing modern technologies such as Astro, Tailwind CSS, and Swiper.js.
 
 ![Portfolio Screenshot](public/screenshot.png)
 
@@ -34,27 +34,26 @@ Inside of your Astro project, you'll see the following folders and files:
 │   └── components/
 │       └── Header.astro
 │   └── content/
-│       └── diplomas
-|        └── config.ts
+│       └── diplomas/
 │            └── diploma-01.md
-|           └── ...
-|       └── projects
-|       └── softSkills
+|            └── ...
+|       └── projects/
+|       └── softSkills/
 |       └── config.ts
 │   └── layouts/
 │       └── BaseLayout.astro
 |       └── MarkdownProjectLayout.astro
 │   └── pages/
-│       └── projects
+│       └── projects/
 │           └── [slug].astro
 │           └── index.astro
-│       └── tags
+│       └── tags/
 │           └── [slug].astro
 │           └── index.astro
 │       └── index.astro
-├── utils
+├── utils/
 │   └── getUniqueTags.js
-├── styles
+├── styles/
 │   └── global.css
 └── package.json
 
